@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <!-- Style sheets -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-FDYV-XyExcrU-XhS3G59-sBpuhoDJuA"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=false"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    
+    <title> Signal Mapper </title>
+    
+  </head>
+  
+  <body>
+    <div class="mainBody" data-ng-app="">
+      <div class="heading1"> Signal Mapper </div>
+      <div class="optionsBar" data-ng-controller="selectOptionsController"> 
+        <select data-ng-model="tech" data-ng-options="technology.name for technology in technologies"><option value="">-- choose a technology --</option></select>
+        <select data-ng-model="optr" data-ng-options="operator.name for operator in operators"><option value="">-- choose an operator --</option></select>
+        <select data-ng-model="data" data-ng-options="dataset.name for dataset in datasets"><option value="">-- choose a dataset --</option></select>
+      </div>
+      <div class="map-canvas" id="map-canvas" data-ng-controller="updateMapController"></div>
+    </div>
+  </body>
+  
+</html>
