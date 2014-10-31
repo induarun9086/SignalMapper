@@ -36,6 +36,9 @@ function updateMap($scope)
     $scope.heatMap.setMap(null);
   }
   
+  /* Clear previous location array */
+  locationArray = [];
+  
   /* Build an array of locations in the current map view */
   location.lat = rightTopLat - (currVertLatDelta / 2);
   for(i=0;i<$scope.hResolution;i++)
