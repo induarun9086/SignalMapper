@@ -15,7 +15,7 @@
 	</servlet>
  	<servlet-mapping>
     	<servlet-name>SignalQualityServlet</servlet-name> 
-    	<url-pattern>/getSigQual</url-pattern>
+    	<url-pattern>/getSignalData</url-pattern>
 	</servlet-mapping>
 
 </web-app>
