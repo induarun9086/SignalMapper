@@ -1,6 +1,16 @@
 var intiLat = 54.076806;
 var initLng = 9.962961;
 
+function getSignalWeight($scope, lat, lng, currHoriPixelLen, currVertPixelLen)
+{
+  return Math.random();
+  /*return (($scope.heatMapDataLoopJ / $scope.hResolution)) *10 /*+ $scope.heatMapDataLoopJ) / ($scope.hResolution * $scope.vResolution)*/;
+  /*if($scope.heatMapDataLoopJ == 0)
+  return 0;
+  else 
+  return 10;*/
+}
+
 function updateMap($scope)
 {
   var lat           = 0;
@@ -13,29 +23,35 @@ function updateMap($scope)
   var leftBotLng    = currBounds.getSouthWest().lng();
   var rightTopLng   = currBounds.getNorthEast().lng();
   
-  var currMapWidth  = Math.abs(rightTopLng - leftBotLng);
-  var currMapHeight = Math.abs(rightTopLat - leftBotLat);
+  var currMapWidth      = Math.abs(rightTopLng - leftBotLng);
+  var currMapHeight     = Math.abs(rightTopLat - leftBotLat);
+  var currHoriLngDelta  = (currMapWidth / $scope.vResolution);
+  var currVertLatDelta  = (currMapHeight / $scope.hResolution);
+  var currHoriPixelLen  = (currMapWidth / $scope.vResolution);
+  var currVertPixelLen  = (currMapHeight / $scope.hResolution);
   
-  var currPrecision = currMapWidth;
   var heatmapData   = [];
   
-  lat = leftBotLat + ((currMapHeight / $scope.resolution) / 2);
-  for(i=0;i<$scope.resolution;i++)
+  lat = rightTopLat - (currVertLatDelta / 2);
+  for(i=0;i<$scope.hResolution;i++)
   {
-    lng = leftBotLng + ((currMapWidth / $scope.resolution) / 2);
-    for(j=0;j<$scope.resolution;j++)
+    lng = leftBotLng + (currHoriLngDelta / 2);
+    for(j=0;j<$scope.vResolution;j++)
     {
+      $scope.heatMapDataLoopI = i;
+      $scope.heatMapDataLoopJ = j;
+      
       var weightedLoc = 
       {
         location: new google.maps.LatLng(lat, lng),
-        weight: Math.random(),
+        weight: getSignalWeight($scope, lat, lng, currHoriPixelLen, currVertPixelLen),
       }
       
       heatmapData.push(weightedLoc);
       
-      lng += currMapWidth / $scope.resolution;
+      lng += currHoriLngDelta;
     }
-    lat += currMapHeight / $scope.resolution;
+    lat -= currVertLatDelta;
   }
    
   if($scope.heatMap != null)
@@ -45,9 +61,10 @@ function updateMap($scope)
   $scope.heatMap = new google.maps.visualization.HeatmapLayer(
   {
     data: heatmapData,
-    dissipating: false,
-    radius: 1,
-    opacity: 0.27
+    dissipating: true,
+    maxIntensity: 1,
+    radius: ((($( window ).width() / $scope.hResolution) + ($( window ).height() / $scope.vResolution)) / 1.8),
+    opacity: 0.33
   });
   $scope.heatMap.setMap($scope.currMap);
 }
@@ -56,11 +73,14 @@ function updateMapController($scope)
 {
   if(($scope.initDone == false) || ($scope.initDone == undefined))
   {
-    $scope.initDone    = true;
-    $scope.currQuantas = null;
-    $scope.currMap     = null;
-    $scope.heatMap     = null;
-    $scope.resolution  = 50;
+    $scope.initDone           = true;
+    $scope.currQuantas        = null;
+    $scope.currMap            = null;
+    $scope.heatMap            = null;
+    $scope.hResolution        = 32;
+    $scope.vResolution        = (($scope.hResolution) * ($( window ).width() / $( window ).height()));
+    $scope.heatMapDataLoopI   = 0;
+    $scope.heatMapDataLoopJ   = 0;
     
     var mapOptions  = 
     {
@@ -85,4 +105,3 @@ function selectOptionsController($scope)
   $scope.operators = [{name:'Cellone'}, {name:'Airtel'}, {name:'Aircel'}, {name:'Idea'}, {name:'All'}];
   $scope.datasets = [{name:'Local'}, {name:'Global'}, {name:'All'}];
 }
-
