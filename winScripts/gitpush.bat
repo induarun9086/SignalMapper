@@ -1,3 +1,3 @@
 cd ..
-git push https://github.com/dinesharun/signalmapper master
+git push https://github.com/induarun9086/SignalMapper master
 pause
