@@ -10,7 +10,7 @@ function getSignalData($scope)
   
   ajaxObj.error(function(data, status, headers, config) 
   { 
-    redrawMap($scope, "");
+    redrawMap($scope, "[]");
   });
 }
 
@@ -60,8 +60,7 @@ function updateMap($scope)
 function redrawMap($scope, data)
 {
   var weightedLoc = null;
-  var dataStr     = data.toString();
-  var sigData     = JSON.parse(dataStr);
+  var sigData     = data;
   
   /* Fillup invalid data for the points for which server didn't send data */
   if(sigData.length < $scope.locationArray.length)
@@ -89,7 +88,7 @@ function redrawMap($scope, data)
   {
     data: $scope.heatmapData,
     dissipating: true,
-    maxIntensity: 1,
+    maxIntensity: 110,
     radius: ((($( window ).width() / $scope.hResolution) + ($( window ).height() / $scope.vResolution)) / 1.8),
     opacity: 0.33
   });
