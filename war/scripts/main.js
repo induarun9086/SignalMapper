@@ -77,7 +77,7 @@ function updateMapController($scope)
     $scope.currQuantas        = null;
     $scope.currMap            = null;
     $scope.heatMap            = null;
-    $scope.hResolution        = 32;
+    $scope.hResolution        = 16;
     $scope.vResolution        = (($scope.hResolution) * ($( window ).width() / $( window ).height()));
     $scope.heatMapDataLoopI   = 0;
     $scope.heatMapDataLoopJ   = 0;
