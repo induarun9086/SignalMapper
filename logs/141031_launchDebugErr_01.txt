@@ -1,0 +1,235 @@
+
+C:\Documents and Settings\extern.kasipandian\My Documents\Dinesh\Personal\My_Web
+sites\SignalMapper\winScripts>cd ..
+
+C:\Documents and Settings\extern.kasipandian\My Documents\Dinesh\Personal\My_Web
+sites\SignalMapper>dev_appserver.cmd --disable_update_check war
+Okt 31, 2014 3:28:44 PM com.google.apphosting.utils.config.AppEngineWebXmlReader
+ readAppEngineWebXml
+INFO: Successfully processed C:\Documents and Settings\extern.kasipandian\My Doc
+uments\Dinesh\Personal\My_Websites\SignalMapper\war\WEB-INF/appengine-web.xml
+Executing [C:\Program Files\Java\jre7\bin\java, -javaagent:C:\Documents and Sett
+ings\extern.kasipandian\My Documents\Dinesh\Programs\appengine-java-sdk\lib\agen
+t\appengine-agent.jar, -Xbootclasspath/p:C:\Documents and Settings\extern.kasipa
+ndian\My Documents\Dinesh\Programs\appengine-java-sdk\lib\override\appengine-dev
+-jdk-overrides.jar, -classpath, C:\Documents and Settings\extern.kasipandian\My
+Documents\Dinesh\Programs\appengine-java-sdk\bin\..\lib\appengine-tools-api.jar,
+ com.google.appengine.tools.development.DevAppServerMain, --property=kickstart.u
+ser.dir=C:\Documents and Settings\extern.kasipandian\My Documents\Dinesh\Persona
+l\My_Websites\SignalMapper, --disable_update_check, C:\Documents and Settings\ex
+tern.kasipandian\My Documents\Dinesh\Personal\My_Websites\SignalMapper\war]
+Okt 31, 2014 3:28:45 PM com.google.apphosting.utils.config.AppEngineWebXmlReader
+ readAppEngineWebXml
+INFO: Successfully processed C:\Documents and Settings\extern.kasipandian\My Doc
+uments\Dinesh\Personal\My_Websites\SignalMapper\war\WEB-INF/appengine-web.xml
+Okt 31, 2014 3:28:45 PM com.google.apphosting.utils.config.AbstractConfigXmlRead
+er readConfigXml
+INFO: Successfully processed C:\Documents and Settings\extern.kasipandian\My Doc
+uments\Dinesh\Personal\My_Websites\SignalMapper\war\WEB-INF/web.xml
+Okt 31, 2014 3:28:45 PM com.google.apphosting.utils.jetty.JettyLogger info
+INFO: Logging to JettyLogger(null) via com.google.apphosting.utils.jetty.JettyLo
+gger
+Okt 31, 2014 3:28:45 PM com.google.apphosting.utils.jetty.JettyLogger info
+INFO: jetty-6.1.x
+Okt 31, 2014 3:28:46 PM com.google.apphosting.utils.jetty.JettyLogger warn
+WARNING: EXCEPTION
+java.lang.ClassNotFoundException: com.signalmapper.servlets.SignalQualityServlet
+
+        at java.net.URLClassLoader$1.run(Unknown Source)
+        at java.net.URLClassLoader$1.run(Unknown Source)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(Unknown Source)
+        at java.lang.ClassLoader.loadClass(Unknown Source)
+        at com.google.appengine.tools.development.IsolatedAppClassLoader.loadCla
+ss(IsolatedAppClassLoader.java:216)
+        at java.lang.ClassLoader.loadClass(Unknown Source)
+        at org.mortbay.util.Loader.loadClass(Loader.java:91)
+        at org.mortbay.util.Loader.loadClass(Loader.java:71)
+        at org.mortbay.jetty.servlet.Holder.doStart(Holder.java:73)
+        at org.mortbay.jetty.servlet.ServletHolder.doStart(ServletHolder.java:24
+2)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:
+50)
+        at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.ja
+va:685)
+        at org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+        at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.jav
+a:1250)
+        at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:
+517)
+        at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467
+)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:
+50)
+        at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:
+130)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:
+50)
+        at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:
+130)
+        at org.mortbay.jetty.Server.doStart(Server.java:224)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:
+50)
+        at com.google.appengine.tools.development.JettyContainerService.startCon
+tainer(JettyContainerService.java:255)
+        at com.google.appengine.tools.development.AbstractContainerService.start
+up(AbstractContainerService.java:288)
+        at com.google.appengine.tools.development.AutomaticInstanceHolder.startU
+p(AutomaticInstanceHolder.java:26)
+        at com.google.appengine.tools.development.AbstractModule.startup(Abstrac
+tModule.java:87)
+        at com.google.appengine.tools.development.Modules.startup(Modules.java:1
+05)
+        at com.google.appengine.tools.development.DevAppServerImpl.doStart(DevAp
+pServerImpl.java:258)
+        at com.google.appengine.tools.development.DevAppServerImpl.access$000(De
+vAppServerImpl.java:47)
+        at com.google.appengine.tools.development.DevAppServerImpl$1.run(DevAppS
+erverImpl.java:213)
+        at com.google.appengine.tools.development.DevAppServerImpl$1.run(DevAppS
+erverImpl.java:211)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at com.google.appengine.tools.development.DevAppServerImpl.start(DevAppS
+erverImpl.java:211)
+        at com.google.appengine.tools.development.DevAppServerMain$StartAction.a
+pply(DevAppServerMain.java:277)
+        at com.google.appengine.tools.util.Parser$ParseResult.applyArgs(Parser.j
+ava:48)
+        at com.google.appengine.tools.development.DevAppServerMain.run(DevAppSer
+verMain.java:219)
+        at com.google.appengine.tools.development.DevAppServerMain.main(DevAppSe
+rverMain.java:210)
+
+Okt 31, 2014 3:28:46 PM com.google.appengine.tools.development.ApiProxyLocalImpl
+ log
+SEVERE: javax.servlet.ServletContext log: unavailable
+javax.servlet.UnavailableException: com.signalmapper.servlets.SignalQualityServl
+et
+        at org.mortbay.jetty.servlet.Holder.doStart(Holder.java:79)
+        at org.mortbay.jetty.servlet.ServletHolder.doStart(ServletHolder.java:24
+2)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:
+50)
+        at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.ja
+va:685)
+        at org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+        at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.jav
+a:1250)
+        at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:
+517)
+        at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467
+)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:
+50)
+        at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:
+130)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:
+50)
+        at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:
+130)
+        at org.mortbay.jetty.Server.doStart(Server.java:224)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:
+50)
+        at com.google.appengine.tools.development.JettyContainerService.startCon
+tainer(JettyContainerService.java:255)
+        at com.google.appengine.tools.development.AbstractContainerService.start
+up(AbstractContainerService.java:288)
+        at com.google.appengine.tools.development.AutomaticInstanceHolder.startU
+p(AutomaticInstanceHolder.java:26)
+        at com.google.appengine.tools.development.AbstractModule.startup(Abstrac
+tModule.java:87)
+        at com.google.appengine.tools.development.Modules.startup(Modules.java:1
+05)
+        at com.google.appengine.tools.development.DevAppServerImpl.doStart(DevAp
+pServerImpl.java:258)
+        at com.google.appengine.tools.development.DevAppServerImpl.access$000(De
+vAppServerImpl.java:47)
+        at com.google.appengine.tools.development.DevAppServerImpl$1.run(DevAppS
+erverImpl.java:213)
+        at com.google.appengine.tools.development.DevAppServerImpl$1.run(DevAppS
+erverImpl.java:211)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at com.google.appengine.tools.development.DevAppServerImpl.start(DevAppS
+erverImpl.java:211)
+        at com.google.appengine.tools.development.DevAppServerMain$StartAction.a
+pply(DevAppServerMain.java:277)
+        at com.google.appengine.tools.util.Parser$ParseResult.applyArgs(Parser.j
+ava:48)
+        at com.google.appengine.tools.development.DevAppServerMain.run(DevAppSer
+verMain.java:219)
+        at com.google.appengine.tools.development.DevAppServerMain.main(DevAppSe
+rverMain.java:210)
+
+Okt 31, 2014 3:28:46 PM com.google.apphosting.utils.jetty.JettyLogger warn
+WARNING: failed SignalQualityServlet: java.lang.NullPointerException
+Okt 31, 2014 3:28:46 PM com.google.apphosting.utils.jetty.JettyLogger warn
+WARNING: Failed startup of context com.google.appengine.tools.development.DevApp
+EngineWebAppContext@3587d1{/,C:\Documents and Settings\extern.kasipandian\My Doc
+uments\Dinesh\Personal\My_Websites\SignalMapper\war}
+java.lang.NullPointerException
+        at java.lang.Class.isAssignableFrom(Native Method)
+        at org.mortbay.jetty.servlet.ServletHolder.doStart(ServletHolder.java:25
+6)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:
+50)
+        at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.ja
+va:685)
+        at org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+        at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.jav
+a:1250)
+        at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:
+517)
+        at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467
+)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:
+50)
+        at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:
+130)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:
+50)
+        at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:
+130)
+        at org.mortbay.jetty.Server.doStart(Server.java:224)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:
+50)
+        at com.google.appengine.tools.development.JettyContainerService.startCon
+tainer(JettyContainerService.java:255)
+        at com.google.appengine.tools.development.AbstractContainerService.start
+up(AbstractContainerService.java:288)
+        at com.google.appengine.tools.development.AutomaticInstanceHolder.startU
+p(AutomaticInstanceHolder.java:26)
+        at com.google.appengine.tools.development.AbstractModule.startup(Abstrac
+tModule.java:87)
+        at com.google.appengine.tools.development.Modules.startup(Modules.java:1
+05)
+        at com.google.appengine.tools.development.DevAppServerImpl.doStart(DevAp
+pServerImpl.java:258)
+        at com.google.appengine.tools.development.DevAppServerImpl.access$000(De
+vAppServerImpl.java:47)
+        at com.google.appengine.tools.development.DevAppServerImpl$1.run(DevAppS
+erverImpl.java:213)
+        at com.google.appengine.tools.development.DevAppServerImpl$1.run(DevAppS
+erverImpl.java:211)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at com.google.appengine.tools.development.DevAppServerImpl.start(DevAppS
+erverImpl.java:211)
+        at com.google.appengine.tools.development.DevAppServerMain$StartAction.a
+pply(DevAppServerMain.java:277)
+        at com.google.appengine.tools.util.Parser$ParseResult.applyArgs(Parser.j
+ava:48)
+        at com.google.appengine.tools.development.DevAppServerMain.run(DevAppSer
+verMain.java:219)
+        at com.google.appengine.tools.development.DevAppServerMain.main(DevAppSe
+rverMain.java:210)
+
+Okt 31, 2014 3:28:46 PM com.google.apphosting.utils.jetty.JettyLogger info
+INFO: Started SelectChannelConnector@127.0.0.1:8080
+Okt 31, 2014 3:28:46 PM com.google.appengine.tools.development.AbstractModule st
+artup
+INFO: Module instance default is running at http://localhost:8080/
+Okt 31, 2014 3:28:46 PM com.google.appengine.tools.development.AbstractModule st
+artup
+INFO: The admin console is running at http://localhost:8080/_ah/admin
+Okt 31, 2014 3:28:46 PM com.google.appengine.tools.development.DevAppServerImpl
+doStart
+INFO: Dev App Server is now running
