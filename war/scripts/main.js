@@ -30,14 +30,13 @@ function updateMap($scope)
   var currHoriLngDelta  = (currMapWidth / $scope.vResolution);
   var currVertLatDelta  = (currMapHeight / $scope.hResolution);
   
-  /* Clear existing map */
-  if($scope.heatMap != null)
-  {  
-    $scope.heatMap.setMap(null);
-  }
-  
   /* Clear previous location array */
-  locationArray = [];
+  $scope.locationArray = [];
+  $scope.locationArray.length = 0;
+  /* Clear previous heat map array */
+  $scope.heatmapData = [];
+  $scope.heatmapData.length = 0;
+  $scope.heatMap.setData([]);
   
   /* Build an array of locations in the current map view */
   location.lat = rightTopLat - (currVertLatDelta / 2);
@@ -85,19 +84,8 @@ function redrawMap($scope, data)
 
     $scope.heatmapData.push(weightedLoc);
   }
-
-  /* Create new Heatmap options */
-  $scope.heatMap = new google.maps.visualization.HeatmapLayer(
-  {
-    data: $scope.heatmapData,
-    dissipating: true,
-    maxIntensity: 110,
-    radius: ((($( window ).width() / $scope.hResolution) + ($( window ).height() / $scope.vResolution)) / 1.8),
-    opacity: 0.33
-  });
   
-  /* Draw haet map in current map */
-  $scope.heatMap.setMap($scope.currMap);
+  $scope.heatMap.setData($scope.heatmapData);
 }
 
 function updateMapController($scope, $http)
@@ -130,7 +118,21 @@ function updateMapController($scope, $http)
     $scope.currMap = new google.maps.Map(document.getElementById('map-canvas'),
                                          mapOptions);
                                   
-    google.maps.event.addListener($scope.currMap, 'bounds_changed', function() { updateMap($scope); });   
+    google.maps.event.addListener($scope.currMap, 'dragend', function() { updateMap($scope); });
+    google.maps.event.addListener($scope.currMap, 'zoom_changed', function() { updateMap($scope); });
+    
+    /* Create new Heatmap options */
+    $scope.heatMap = new google.maps.visualization.HeatmapLayer(
+    {
+      data: $scope.heatmapData,
+      dissipating: true,
+      maxIntensity: 110,
+      radius: ((($( window ).width() / $scope.hResolution) + ($( window ).height() / $scope.vResolution)) / 1.8),
+      opacity: 0.33
+    });
+    
+    /* Draw haet map in current map */
+    $scope.heatMap.setMap($scope.currMap);
   }
   else
   {                
