@@ -30,13 +30,8 @@ function updateMap($scope)
   var currHoriLngDelta  = (currMapWidth / $scope.vResolution);
   var currVertLatDelta  = (currMapHeight / $scope.hResolution);
   
-  /* Clear previous location array */
-  $scope.locationArray = [];
-  $scope.locationArray.length = 0;
-  /* Clear previous heat map array */
-  $scope.heatmapData = [];
-  $scope.heatmapData.length = 0;
-  $scope.heatMap.setData([]);
+  /* Clear the map */
+  clearMap($scope);
   
   /* Build an array of locations in the current map view */
   location.lat = rightTopLat - (currVertLatDelta / 2);
@@ -57,6 +52,17 @@ function updateMap($scope)
   
   /* Get the signal data from the server and update the map in the callback */
   getSignalData($scope); 
+}
+
+function clearMap($scope)
+{
+  /* Clear previous location array */
+  $scope.locationArray = [];
+  $scope.locationArray.length = 0;
+  /* Clear previous heat map array */
+  $scope.heatmapData = [];
+  $scope.heatmapData.length = 0;
+  $scope.heatMap.setData([]);
 }
 
 function redrawMap($scope, data)
@@ -118,8 +124,9 @@ function updateMapController($scope, $http)
     $scope.currMap = new google.maps.Map(document.getElementById('map-canvas'),
                                          mapOptions);
                                   
-    google.maps.event.addListener($scope.currMap, 'dragend', function() { updateMap($scope); });
-    google.maps.event.addListener($scope.currMap, 'zoom_changed', function() { updateMap($scope); });
+    google.maps.event.addListener($scope.currMap, 'idle', function() { updateMap($scope); });
+    google.maps.event.addListener($scope.currMap, 'zoom_changed', function() { clearMap($scope); });
+    google.maps.event.addListener($scope.currMap, 'dragstart', function() { clearMap($scope); });
     
     /* Create new Heatmap options */
     $scope.heatMap = new google.maps.visualization.HeatmapLayer(
