@@ -27,6 +27,18 @@ function updateMap($scope)
   var rightTopLng       = currBounds.getNorthEast().lng();
   var currMapWidth      = Math.abs(rightTopLng - leftBotLng);
   var currMapHeight     = Math.abs(rightTopLat - leftBotLat);
+  
+  /* */
+  var currHoriDist = distBetPoints(rightTopLat, rightTopLng, rightTopLat, leftBotLng);
+  var currVertDist = distBetPoints(rightTopLat, rightTopLng, leftBotLat, rightTopLng);
+  
+  /* Find distance delta */
+  $scope.distDelta  = (currHoriDist / $scope.hResolution);
+  
+  /* Find equal vertical resolution */
+  $scope.vResolution = ((currVertDist * $scope.hResolution) / currHoriDist);
+  
+  /* Find lat lng deltas */
   var currHoriLngDelta  = (currMapWidth / $scope.vResolution);
   var currVertLatDelta  = (currMapHeight / $scope.hResolution);
   
@@ -39,10 +51,7 @@ function updateMap($scope)
   {
     location.lng = leftBotLng + (currHoriLngDelta / 2);
     for(j=0;j<$scope.vResolution;j++)
-    {
-      $scope.heatMapDataLoopI = i;
-      $scope.heatMapDataLoopJ = j;
-      
+    {     
       $scope.locationArray.push({lat: location.lat, lng: location.lng});
       
       location.lng += currHoriLngDelta;
@@ -106,10 +115,7 @@ function updateMapController($scope, $http)
     $scope.currMap                = null;
     $scope.heatMap                = null;
     $scope.hResolution            = 16;
-    $scope.vResolution            = (($scope.hResolution) * ($( window ).width() / $( window ).height()));
-    $scope.heatMapDataLoopI       = 0;
-    $scope.heatMapDataLoopJ       = 0;
-    $scope.pixelArea              = 0;
+    $scope.vResolution            = 16;
     $scope.heatmapData            = [];
     $scope.locationArray          = [];
     
@@ -154,9 +160,20 @@ function selectOptionsController($scope)
   $scope.datasets = [{name:'Local'}, {name:'Global'}, {name:'All'}];
 }
 
-/*return Math.random();*/
-/*return (($scope.heatMapDataLoopJ / $scope.hResolution)) *10 /*+ $scope.heatMapDataLoopJ) / ($scope.hResolution * $scope.vResolution)*/;
-/*if($scope.heatMapDataLoopJ == 0)
-return 0;
-else 
-return 10;*/
+function distBetPoints(srcLat, srcLng, destLat, destLng)
+{
+  var piVal           = 3.14159;
+  var earthMeanRadius = 6371000;                    /* in kilo meters */
+  var srcLatInRad     = srcLat * (piVal / 180);
+  var destLatInRad    = destLat * (piVal / 180);
+  var latDiffInRad    = ((destLat - srcLat) * (piVal / 180));
+  var lngDiffInRad    = ((destLng - srcLng) * (piVal / 180));
+  var distance        = 0;
+  
+  var a = (Math.sin(latDiffInRad/2) * Math.sin(latDiffInRad/2)) + Math.cos(srcLatInRad) * Math.cos(destLatInRad) * (Math.sin(lngDiffInRad/2) * Math.sin(lngDiffInRad/2));
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
+  distance = earthMeanRadius * c;
+  
+  return distance;
+}
