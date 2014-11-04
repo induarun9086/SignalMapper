@@ -27,8 +27,8 @@ function updateMap($scope)
   var rightTopLng       = currBounds.getNorthEast().lng();
   var currMapWidth      = Math.abs(rightTopLng - leftBotLng);
   var currMapHeight     = Math.abs(rightTopLat - leftBotLat);
-  
-  /* */
+    
+  /* Find distances */
   var currHoriDist = distBetPoints(rightTopLat, rightTopLng, rightTopLat, leftBotLng);
   var currVertDist = distBetPoints(rightTopLat, rightTopLng, leftBotLat, rightTopLng);
   
@@ -36,42 +36,104 @@ function updateMap($scope)
   $scope.distDelta  = (currHoriDist / $scope.hResolution);
   
   /* Find equal vertical resolution */
-  $scope.vResolution = ((currVertDist * $scope.hResolution) / currHoriDist);
+  $scope.vResolution = Math.round(((currVertDist * $scope.hResolution) / currHoriDist));
   
   /* Find lat lng deltas */
-  var currHoriLngDelta  = (currMapWidth / $scope.vResolution);
-  var currVertLatDelta  = (currMapHeight / $scope.hResolution);
+  $scope.currHoriLngDelta  = (currMapWidth / $scope.hResolution);
+  $scope.currVertLatDelta  = (currMapHeight / $scope.vResolution);
   
   /* Clear the map */
   clearMap($scope);
   
   /* Build an array of locations in the current map view */
-  location.lat = rightTopLat - (currVertLatDelta / 2);
-  for(i=0;i<$scope.hResolution;i++)
+  location.lat = rightTopLat - ($scope.currVertLatDelta / 2);
+  for(i=0;i<$scope.vResolution;i++)
   {
-    location.lng = leftBotLng + (currHoriLngDelta / 2);
-    for(j=0;j<$scope.vResolution;j++)
+    location.lng = leftBotLng + ($scope.currHoriLngDelta / 2);
+    for(j=0;j<$scope.hResolution;j++)
     {     
       $scope.locationArray.push({lat: location.lat, lng: location.lng});
-      
-      location.lng += currHoriLngDelta;
+  
+      location.lng += $scope.currHoriLngDelta;
     }
-    location.lat -= currVertLatDelta;
+    location.lat -= $scope.currVertLatDelta;
   }
   
+  /* Draw grid lines if required */
+  drawGridLines($scope);
+  
   /* Get the signal data from the server and update the map in the callback */
-  getSignalData($scope); 
+  getSignalData($scope);
+}
+
+function drawGridLines($scope)
+{
+  /* If tiles are to be drawn */
+  if($scope.drawGrid == true)
+  {  
+    /* Draw from the current location array */
+    for(i=0;i<$scope.locationArray.length;i++)
+    {         
+      /* Create a single tile co-ordinates */
+      var tileCoords = [
+         new google.maps.LatLng($scope.locationArray[i].lat + ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng - ($scope.currHoriLngDelta / 2)),
+         new google.maps.LatLng($scope.locationArray[i].lat + ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng + ($scope.currHoriLngDelta / 2)),
+         new google.maps.LatLng($scope.locationArray[i].lat - ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng + ($scope.currHoriLngDelta / 2)),
+         new google.maps.LatLng($scope.locationArray[i].lat - ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng - ($scope.currHoriLngDelta / 2)),
+         new google.maps.LatLng($scope.locationArray[i].lat + ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng - ($scope.currHoriLngDelta / 2))
+        ];
+     
+      /* Initialize the tile */
+      var tile = new google.maps.Polygon({
+        paths: tileCoords,
+        strokeColor: '#000000',
+        strokeOpacity: 0.3,
+        strokeWeight: 1,
+        fillColor: '#0000FF',
+        fillOpacity: 0 + (i / ($scope.locationArray.length * 2))
+      });
+
+      /* Draw the tile in the map */
+      tile.setMap($scope.currMap);
+      
+      /* Save the tile for future use */
+      $scope.tiles.push(tile);
+    }
+  }
+  else
+  {
+    /* Clear Grid lines*/
+    for(i=0;i<$scope.tiles.length;i++)
+    {
+      $scope.tiles[i].setMap(null);
+    }
+    
+    /* Clear grid lines array */
+    $scope.tiles                = [];
+    $scope.tiles.length         = 0;
+  }
 }
 
 function clearMap($scope)
 {
+  /* Clear Map */
+  $scope.heatMap.setData([]);
+  
+  /* Clear Grid lines*/
+  for(i=0;i<$scope.tiles.length;i++)
+  {
+    $scope.tiles[i].setMap(null);
+  }
+  
   /* Clear previous location array */
-  $scope.locationArray = [];
+  $scope.locationArray        = [];
   $scope.locationArray.length = 0;
   /* Clear previous heat map array */
-  $scope.heatmapData = [];
-  $scope.heatmapData.length = 0;
-  $scope.heatMap.setData([]);
+  $scope.heatmapData          = [];
+  $scope.heatmapData.length   = 0;
+  /* Clear grid lines array */
+  $scope.tiles                = [];
+  $scope.tiles.length         = 0;
 }
 
 function redrawMap($scope, data)
@@ -118,9 +180,18 @@ function updateMapController($scope, $http)
     $scope.vResolution            = 16;
     $scope.heatmapData            = [];
     $scope.locationArray          = [];
+    $scope.drawGrid               = false;
+    $scope.tiles                  = [];
+    $scope.currHoriLngDelta       = 0;
+    $scope.currVertLatDelta       = 0;
     
+    $scope.drawGridLinesFn        = function () { drawGridLines($scope); };    
     $scope.httpFn                 = $http;
-    
+      
+    $scope.technologies = [{name:'2G'}, {name:'3G'}, {name:'4G'}, {name:'5G'}, {name:'All'}];
+    $scope.operators = [{name:'Cellone'}, {name:'Airtel'}, {name:'Aircel'}, {name:'Idea'}, {name:'All'}];
+    $scope.datasets = [{name:'Local'}, {name:'Global'}, {name:'All'}];
+  
     var mapOptions  = 
     {
       center: { lat: $scope.intiLat, lng: $scope.initLng},
@@ -141,7 +212,7 @@ function updateMapController($scope, $http)
       dissipating: true,
       maxIntensity: 110,
       radius: ((($( window ).width() / $scope.hResolution) + ($( window ).height() / $scope.vResolution)) / 1.8),
-      opacity: 0.33
+      opacity: 0.21
     });
     
     /* Draw haet map in current map */
@@ -151,13 +222,6 @@ function updateMapController($scope, $http)
   {                
     updateMap($scope);
   }
-}
-
-function selectOptionsController($scope)
-{
-  $scope.technologies = [{name:'2G'}, {name:'3G'}, {name:'4G'}, {name:'5G'}, {name:'All'}];
-  $scope.operators = [{name:'Cellone'}, {name:'Airtel'}, {name:'Aircel'}, {name:'Idea'}, {name:'All'}];
-  $scope.datasets = [{name:'Local'}, {name:'Global'}, {name:'All'}];
 }
 
 function distBetPoints(srcLat, srcLng, destLat, destLng)

@@ -18,17 +18,18 @@
   </head>
   
   <body>
-    <div class="mainBody" data-ng-app="">
-      <div class="optionsBar" data-ng-controller="selectOptionsController"> 
+    <div class="mainBody" data-ng-app="" data-ng-controller="updateMapController">
+      <div class="optionsBar"> 
         <h1>Signal Mapper</h1>
         <div class="innerBox">
           <br />
           <select data-ng-model="tech" data-ng-options="technology.name for technology in technologies"><option value="">-- choose a technology --</option></select><br /><br />
           <select data-ng-model="optr" data-ng-options="operator.name for operator in operators"><option value="">-- choose an operator --</option></select><br /><br />
           <select data-ng-model="data" data-ng-options="dataset.name for dataset in datasets"><option value="">-- choose a dataset --</option></select><br /><br />
+          <input type="checkbox" data-ng-model="drawGrid" data-ng-change="drawGridLinesFn()"/>&nbsp;Draw Grid Lines<br /><br />
         </div>
       </div>
-      <div class="mapContainer"> <div class="mapCanvas" id="map-canvas" data-ng-controller="updateMapController"></div></div>
+      <div class="mapContainer"> <div class="mapCanvas" id="map-canvas"></div></div>
       <div class="fotterBar"> 
         <div class="innerBox"> <span style="font-size:150%; vertical-align:middle;"> &copy; </span> 2014. All rights reserved </div>
       </div>
