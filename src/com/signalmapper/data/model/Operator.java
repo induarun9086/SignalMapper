@@ -1,50 +1,55 @@
 package com.signalmapper.data.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-
-import com.google.appengine.api.datastore.Key;
 
 @Entity
 public class Operator {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "OperatorID")
-	private Key operatorID;
+	private Long operatorID;
 
-	@Column(name = "CountryID")
-	private Key countryID;
-	
+	@Column(name = "Name")
+	private String name;
+
 	@ManyToMany
-	private Country country;
+	@JoinTable(name = "OperatorCountryTable", 
+	           joinColumns = @JoinColumn(name = "OperatorID"), 
+	           inverseJoinColumns = @JoinColumn(name = "CountryID"))
+	private List<Country> countries;
 
-	public Key getOperatorID() {
+	public Long getOperatorID() {
 		return operatorID;
 	}
 
-	public void setOperatorID(Key operatorID) {
+	public void setOperatorID(Long operatorID) {
 		this.operatorID = operatorID;
 	}
 
-	public Key getCountryID() {
-		return countryID;
+	public String getName() {
+		return name;
 	}
 
-	public void setCountryID(Key countryID) {
-		this.countryID = countryID;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public Country getCountry() {
-		return country;
+	public List<Country> getCountries() {
+		return countries;
 	}
 
-	public void setCountry(Country country) {
-		this.country = country;
+	public void setCountries(List<Country> countries) {
+		this.countries = countries;
 	}
 
 }

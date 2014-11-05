@@ -7,30 +7,31 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Country {
+public class Technology {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "CountryID")
-	private Long countryID;
-
+	@Column(name = "TechnologyID")
+	private Long technologyID;
+	
 	@Column(name = "Name")
-	private String name;
+	private int name;
 
-	public Long getCountryID() {
-		return countryID;
+	public Long getTechnologyID() {
+		return technologyID;
 	}
 
-	public void setCountryID(Long countryID) {
-		this.countryID = countryID;
+	public void setTechnologyID(Long technologyID) {
+		this.technologyID = technologyID;
 	}
 
-	public String getName() {
+	public int getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(int name) {
 		this.name = name;
 	}
-
+	
+	
 }

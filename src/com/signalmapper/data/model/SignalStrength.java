@@ -5,61 +5,38 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
-import com.google.appengine.api.datastore.Key;
 
 @Entity
 public class SignalStrength {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "SignalStrengthID")
-	private Key signalStrengthID;
-	
-	@Column(name = "2G")
-	private int twoG;
-	
-	@Column(name = "3G")
-	private int threeG;
-	
-	@Column(name = "WIFI")
-	private int wifi;
-	
-	@ManyToOne
-	private Operator operator;
-	
+	private Long signalStrengthID;
 
-	public Key getSignalStrengthID() {
+	@ManyToOne
+	@JoinColumn(name = "OperatorID")
+	private Operator operator;
+
+	@ManyToOne
+	@JoinColumn(name = "TechnologyID")
+	private Technology technology;
+
+	@ManyToOne
+	@JoinColumn(name = "LocationID")
+	private Location location;
+
+	@Column(name = "SignalStrengthValue")
+	private int signalStrengthValue;
+
+	public Long getSignalStrengthID() {
 		return signalStrengthID;
 	}
 
-	public void setSignalStrengthID(Key signalStrengthID) {
+	public void setSignalStrengthID(Long signalStrengthID) {
 		this.signalStrengthID = signalStrengthID;
-	}
-
-	public int getTwoG() {
-		return twoG;
-	}
-
-	public void setTwoG(int twoG) {
-		this.twoG = twoG;
-	}
-
-	public int getThreeG() {
-		return threeG;
-	}
-
-	public void setThreeG(int threeG) {
-		this.threeG = threeG;
-	}
-
-	public int getWifi() {
-		return wifi;
-	}
-
-	public void setWifi(int wifi) {
-		this.wifi = wifi;
 	}
 
 	public Operator getOperator() {
@@ -70,5 +47,28 @@ public class SignalStrength {
 		this.operator = operator;
 	}
 
+	public Technology getTechnology() {
+		return technology;
+	}
+
+	public void setTechnology(Technology technology) {
+		this.technology = technology;
+	}
+
+	public int getSignalStrengthValue() {
+		return signalStrengthValue;
+	}
+
+	public void setSignalStrengthValue(int signalStrengthValue) {
+		this.signalStrengthValue = signalStrengthValue;
+	}
+
+	public Location getLocation() {
+		return location;
+	}
+
+	public void setLocation(Location location) {
+		this.location = location;
+	}
 
 }

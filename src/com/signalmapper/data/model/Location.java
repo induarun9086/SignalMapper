@@ -5,9 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
-import com.google.appengine.api.datastore.Key;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity(name = "Location")
 public class Location {
@@ -15,7 +14,7 @@ public class Location {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "LocationID")
-	private Key locationID;
+	private Long locationID;
 
 	@Column(name = "Latitude")
 	private double latitude;
@@ -23,15 +22,15 @@ public class Location {
 	@Column(name = "Longitude")
 	private double longitude;
 	
-	@OneToMany 
-	private SignalStrength signalStrength;
-	
+	@ManyToOne
+	@JoinColumn(name="CountryID")
+	private Country country;
 
-	public Key getLocationID() {
+	public Long getLocationID() {
 		return locationID;
 	}
 
-	public void setLocationID(Key locationID) {
+	public void setLocationID(Long locationID) {
 		this.locationID = locationID;
 	}
 
@@ -50,13 +49,13 @@ public class Location {
 	public void setLongitude(double longitude) {
 		this.longitude = longitude;
 	}
-
-	public SignalStrength getSignalStrength() {
-		return signalStrength;
+	
+	public Country getCountry() {
+		return country;
 	}
 
-	public void setSignalStrength(SignalStrength signalStrength) {
-		this.signalStrength = signalStrength;
+	public void setCountry(Country country) {
+		this.country = country;
 	}
 
 }
