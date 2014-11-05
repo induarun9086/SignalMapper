@@ -3,7 +3,12 @@ body {width: 100%; height: 100%; margin:0px; padding: 0px; border: 1px solid bla
 h1 {font-size:180%; font-weight:bold; font-family:Play; text-align: center; padding:0.3%; border:0px; border-bottom:2px solid black; margin:0px;}
 .mainBody {width: 100%; height: 100%; margin:0px; padding: 0px;}
 .innerBox {width: 99%; height: 99%; margin:0px; padding: 0.5%;}
-.optionsBar {position:fixed; top:0px; left:0px; right:82%; bottom:3%; font-size:120%; font-weight:bold; text-align: center; padding:0px; border:1px solid black;}
-.mapContainer{position:fixed; top:0px; left:18%; right:0px; bottom:3%; border: 0px; border:1px solid black;}
+.optionsBar {position:fixed; top:0px; left:0px; right:85%; bottom:3%; font-size:120%; font-weight:bold; font-family:Play; text-align: center; padding:0px; border:1px solid black;}
+.mapContainer{position:fixed; top:0px; left:15%; right:0px; bottom:3%; border: 0px; border:1px solid black;}
 .mapCanvas {width:100%; height:100%; padding:0px;}
-.fotterBar {position:fixed; top:97%; left:0px; right:0px; bottom:0px; font-size:84%; font-weight:bold; font-family:Play; text-align: center; padding:0px; border:1px solid black; vertical-align:middle; color: grey;}
+.fotterBar {position:fixed; top:97%; left:0px; right:0px; bottom:0px; font-size:84%; font-weight:bold; font-family:Lato; text-align: center; padding:0px; border:1px solid black; vertical-align:middle; color: grey;}
+.filterBlock{font-size:99%; font-weight:bold; font-family:Play; text-align: left; padding:0px;}
+.optionsBlock{font-size:99%; font-weight:bold; font-family:Play; text-align: left; padding:0px;}
+.filterHeader{font-size:150%; font-weight:bold; font-family:Play; text-align: center; padding:0px; border:1px solid black;}
+.optionHeader{font-size:150%; font-weight:bold; font-family:Play; text-align: center; padding:0px; border:1px solid black;}
+.allCB{float:right; font-size:54%; text-align:right;}
