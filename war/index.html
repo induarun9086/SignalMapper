@@ -4,6 +4,7 @@
   
     <!-- Style sheets -->
     <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     
     <!-- Scripts -->
@@ -23,10 +24,22 @@
         <h1>Signal Mapper</h1>
         <div class="innerBox">
           <br />
-          <select data-ng-model="tech" data-ng-options="technology.name for technology in technologies"><option value="">-- choose a technology --</option></select><br /><br />
-          <select data-ng-model="optr" data-ng-options="operator.name for operator in operators"><option value="">-- choose an operator --</option></select><br /><br />
-          <select data-ng-model="data" data-ng-options="dataset.name for dataset in datasets"><option value="">-- choose a dataset --</option></select><br /><br />
-          <input type="checkbox" data-ng-model="drawGrid" data-ng-change="drawGridLinesFn()"/>&nbsp;Draw Grid Lines<br /><br />
+          <div class="filterBlock">
+            <div class="filterHeader"> Operators <span class="allCB">[<input type="checkbox" /> All]</span></div>
+            <ul><li data-ng-repeat="operator in operators"><input type="checkbox" />{{operator.name}}</li></ul>
+          </div>
+          <div class="filterBlock">
+            <div class="filterHeader"> Technologies <span class="allCB">[<input type="checkbox" /> All]</span></div>
+            <ul><li data-ng-repeat="technology in technologies"><input type="checkbox" />{{technology.name}}</li></ul>
+          </div>
+          <div class="filterBlock">
+            <div class="filterHeader"> Datasets <span class="allCB">[<input type="checkbox" /> All]</span></div>
+            <ul><li data-ng-repeat="dataset in datasets"><input type="checkbox" />{{dataset.name}}</li></ul>
+          </div>
+          <div class="optionsBlock">
+            <div class="optionHeader"> Options </div><br />
+            <input type="checkbox" data-ng-model="drawGrid" data-ng-change="drawGridLinesFn()"/>&nbsp;Draw Grid Lines<br /><br />
+          </div>
         </div>
       </div>
       <div class="mapContainer"> <div class="mapCanvas" id="map-canvas"></div></div>

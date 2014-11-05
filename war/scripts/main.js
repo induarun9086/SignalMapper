@@ -188,9 +188,9 @@ function updateMapController($scope, $http)
     $scope.drawGridLinesFn        = function () { drawGridLines($scope); };    
     $scope.httpFn                 = $http;
       
-    $scope.technologies = [{name:'2G'}, {name:'3G'}, {name:'4G'}, {name:'5G'}, {name:'All'}];
-    $scope.operators = [{name:'Cellone'}, {name:'Airtel'}, {name:'Aircel'}, {name:'Idea'}, {name:'All'}];
-    $scope.datasets = [{name:'Local'}, {name:'Global'}, {name:'All'}];
+    $scope.technologies = [{name:'2G'}, {name:'3G'}, {name:'4G'}, {name:'5G'}];
+    $scope.operators = [{name:'Cellone'}, {name:'Airtel'}, {name:'Aircel'}, {name:'Idea'}];
+    $scope.datasets = [{name:'Local'}, {name:'Global'}];
   
     var mapOptions  = 
     {
