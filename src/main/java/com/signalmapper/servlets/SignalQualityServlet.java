@@ -1,12 +1,16 @@
 package com.signalmapper.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.signalmapper.util.StringUtil;
 
 public class SignalQualityServlet extends HttpServlet {
@@ -25,14 +29,16 @@ public class SignalQualityServlet extends HttpServlet {
 
 		Random randomGenerator = new Random();
 		
+		ObjectMapper mapper = new ObjectMapper();
 		
-		//JSONArray jsonArr = new JSONArray();
-		/*for (int i = 0; i < Integer.valueOf(numPoints); i++) {
+		List<Integer> list = new ArrayList<Integer>();
+		
+		for (int i = 0; i < Integer.valueOf(numPoints); i++) {
 			int randomInt = randomGenerator.nextInt(100);
-			jsonArr.put(randomInt);
-		}*/
+			list.add(randomInt);
+		}
 		
-		//response.getWriter().write(jsonArr.toString());
+		mapper.writeValue(response.getWriter(), list);
 
 	}
 }
