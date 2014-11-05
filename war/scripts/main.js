@@ -1,6 +1,6 @@
 function getSignalData($scope)
 {
-  var ajaxCfg = {method:"get", url:"/getSignalData", params:{numPoints: $scope.locationArray.length}};
+  var ajaxCfg = {method:"post", url:"/getSignalData", params:{numPoints: $scope.locationArray.length}, data:JSON.stringify($scope.locationArray)};
   var ajaxObj = $scope.httpFn(ajaxCfg);
   
   ajaxObj.success(function(data, status, headers, config) 
