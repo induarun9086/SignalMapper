@@ -10,5 +10,17 @@
 	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/jackson-annotations-2.4.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/jackson-core-2.4.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/jackson-databind-2.4.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/appengine-api-1.0-sdk-1.9.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/persistence-api-1.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/spring-aop-4.0.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/spring-beans-4.0.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/spring-context-4.0.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/spring-core-4.0.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/spring-expression-4.0.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/spring-web-4.0.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/spring-webmvc-4.0.1.RELEASE.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
