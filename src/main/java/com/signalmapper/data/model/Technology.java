@@ -15,7 +15,7 @@ public class Technology {
 	private Long technologyID;
 	
 	@Column(name = "Name")
-	private int name;
+	private String name;
 
 	public Long getTechnologyID() {
 		return technologyID;
@@ -25,11 +25,11 @@ public class Technology {
 		this.technologyID = technologyID;
 	}
 
-	public int getName() {
+	public String getName() {
 		return name;
 	}
 
-	public void setName(int name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 	

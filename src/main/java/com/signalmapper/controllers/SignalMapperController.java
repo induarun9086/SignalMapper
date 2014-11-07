@@ -23,7 +23,7 @@ public class SignalMapperController {
 
 	@RequestMapping(method = RequestMethod.POST)
 	public @ResponseBody
-	void generateReport(HttpServletRequest request,
+	void getSignalData(HttpServletRequest request,
 			HttpServletResponse response,
 			@RequestParam("numPoints") String numPoints) throws IOException {
 		
