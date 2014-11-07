@@ -1,3 +1,26 @@
+/*---------------------------- Global Constants -------------------------------------------------*/
+var drawMap = true;
+/*-----------------------------------------------------------------------------------------------*/
+
+/*---------------------------- Update font sizes when a resize ----------------------------------*/
+function resizeMe()
+{
+  /* Standard height, for which the body font size is correct */
+  var preferredHeight = 720; 
+  var preferredWidth = 1366; 
+  var fontsize = 12;
+
+  var displayHeight = $(window).height();
+  var displayWidth = $(window).width();
+  var percentageH = ((displayHeight) / preferredHeight);
+  var percentageW = ((displayWidth) / preferredWidth);
+  var percentage  = ((percentageH > percentageW)?(percentageW):(percentageH))
+  var newFontSize = Math.floor(fontsize * percentage);
+  $("body").css("font-size", newFontSize);
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------*/
 function getSignalData($scope)
 {
   var ajaxCfg = {method:"post", url:"/getSignalData", params:{numPoints: $scope.locationArray.length}, data:JSON.stringify($scope.locationArray)};
@@ -13,7 +36,9 @@ function getSignalData($scope)
     redrawMap($scope, "[]");
   });
 }
+/*-----------------------------------------------------------------------------------------------*/
 
+/*-----------------------------------------------------------------------------------------------*/
 function updateMap($scope)
 {
   /* Temporary location object */
@@ -65,55 +90,69 @@ function updateMap($scope)
   /* Get the signal data from the server and update the map in the callback */
   getSignalData($scope);
 }
+/*-----------------------------------------------------------------------------------------------*/
 
-function drawGridLines($scope)
+/*-----------------------------------------------------------------------------------------------*/
+function drawGridLines($scope, toggle)
 {
-  /* If tiles are to be drawn */
-  if($scope.drawGrid == true)
-  {  
-    /* Draw from the current location array */
-    for(i=0;i<$scope.locationArray.length;i++)
-    {         
-      /* Create a single tile co-ordinates */
-      var tileCoords = [
-         new google.maps.LatLng($scope.locationArray[i].lat + ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng - ($scope.currHoriLngDelta / 2)),
-         new google.maps.LatLng($scope.locationArray[i].lat + ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng + ($scope.currHoriLngDelta / 2)),
-         new google.maps.LatLng($scope.locationArray[i].lat - ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng + ($scope.currHoriLngDelta / 2)),
-         new google.maps.LatLng($scope.locationArray[i].lat - ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng - ($scope.currHoriLngDelta / 2)),
-         new google.maps.LatLng($scope.locationArray[i].lat + ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng - ($scope.currHoriLngDelta / 2))
-        ];
-     
-      /* Initialize the tile */
-      var tile = new google.maps.Polygon({
-        paths: tileCoords,
-        strokeColor: '#000000',
-        strokeOpacity: 0.3,
-        strokeWeight: 1,
-        fillColor: '#0000FF',
-        fillOpacity: 0 + (i / ($scope.locationArray.length * 2))
-      });
-
-      /* Draw the tile in the map */
-      tile.setMap($scope.currMap);
-      
-      /* Save the tile for future use */
-      $scope.tiles.push(tile);
-    }
-  }
-  else
+  /* Toggle the state if required */
+  if(toggle == true)
   {
-    /* Clear Grid lines*/
-    for(i=0;i<$scope.tiles.length;i++)
-    {
-      $scope.tiles[i].setMap(null);
+    $scope.drawGrid = !$scope.drawGrid;
+  }
+  
+  /* Only when map is enabled */
+  if(drawMap == true)
+  {
+    /* If tiles are to be drawn */
+    if($scope.drawGrid == true)
+    {  
+      /* Draw from the current location array */
+      for(i=0;i<$scope.locationArray.length;i++)
+      {         
+        /* Create a single tile co-ordinates */
+        var tileCoords = [
+           new google.maps.LatLng($scope.locationArray[i].lat + ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng - ($scope.currHoriLngDelta / 2)),
+           new google.maps.LatLng($scope.locationArray[i].lat + ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng + ($scope.currHoriLngDelta / 2)),
+           new google.maps.LatLng($scope.locationArray[i].lat - ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng + ($scope.currHoriLngDelta / 2)),
+           new google.maps.LatLng($scope.locationArray[i].lat - ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng - ($scope.currHoriLngDelta / 2)),
+           new google.maps.LatLng($scope.locationArray[i].lat + ($scope.currVertLatDelta / 2), $scope.locationArray[i].lng - ($scope.currHoriLngDelta / 2))
+          ];
+       
+        /* Initialize the tile */
+        var tile = new google.maps.Polygon({
+          paths: tileCoords,
+          strokeColor: '#000000',
+          strokeOpacity: 0.3,
+          strokeWeight: 1,
+          fillColor: '#0000FF',
+          fillOpacity: 0 /* + (i / ($scope.locationArray.length * 2)) */
+        });
+
+        /* Draw the tile in the map */
+        tile.setMap($scope.currMap);
+        
+        /* Save the tile for future use */
+        $scope.tiles.push(tile);
+      }
     }
-    
-    /* Clear grid lines array */
-    $scope.tiles                = [];
-    $scope.tiles.length         = 0;
+    else
+    {
+      /* Clear Grid lines*/
+      for(i=0;i<$scope.tiles.length;i++)
+      {
+        $scope.tiles[i].setMap(null);
+      }
+      
+      /* Clear grid lines array */
+      $scope.tiles                = [];
+      $scope.tiles.length         = 0;
+    }
   }
 }
+/*-----------------------------------------------------------------------------------------------*/
 
+/*-----------------------------------------------------------------------------------------------*/
 function clearMap($scope)
 {
   /* Clear Map */
@@ -135,7 +174,9 @@ function clearMap($scope)
   $scope.tiles                = [];
   $scope.tiles.length         = 0;
 }
+/*-----------------------------------------------------------------------------------------------*/
 
+/*-----------------------------------------------------------------------------------------------*/
 function redrawMap($scope, data)
 {
   var weightedLoc = null;
@@ -164,9 +205,11 @@ function redrawMap($scope, data)
   
   $scope.heatMap.setData($scope.heatmapData);
 }
+/*-----------------------------------------------------------------------------------------------*/
 
+/*-----------------------------------------------------------------------------------------------*/
 function updateMapController($scope, $http)
-{
+{ 
   if(($scope.initDone == false) || ($scope.initDone == undefined))
   {
     $scope.intiLat                = 54.076806;
@@ -185,45 +228,59 @@ function updateMapController($scope, $http)
     $scope.currHoriLngDelta       = 0;
     $scope.currVertLatDelta       = 0;
     
-    $scope.drawGridLinesFn        = function () { drawGridLines($scope); };    
+    $scope.drawGridLinesFn        = function (toggle) { drawGridLines($scope, toggle); };
+    $scope.updateFilterState      = function (filterId, idx) { updateFilterState($scope, filterId, idx); };    
     $scope.httpFn                 = $http;
       
-    $scope.technologies = [{name:'2G'}, {name:'3G'}, {name:'4G'}, {name:'5G'}];
-    $scope.operators = [{name:'Cellone'}, {name:'Airtel'}, {name:'Aircel'}, {name:'Idea'}];
-    $scope.datasets = [{name:'Local'}, {name:'Global'}];
+    $scope.filters      = [{name:"Operators", allFilterActive:true, someFilterActive:false, noFilterActive:false, 
+                            items:[{name:'2G', enabled:true}, {name:'3G', enabled:true}, {name:'4G', enabled:true}, {name:'5G', enabled:true}]},
+                           {name:"Technologies", allFilterActive:true, someFilterActive:false, noFilterActive:false, 
+                            items:[{name:'Cellone', enabled:true}, {name:'Airtel', enabled:true}, {name:'Aircel', enabled:true}, {name:'Idea', enabled:true}]},
+                           {name:"Datasets", allFilterActive:true, someFilterActive:false, noFilterActive:false, 
+                            items:[{name:'Local', enabled:true}, {name:'Global', enabled:true}]}];
+
+    resizeMe();
   
-    var mapOptions  = 
+    if(drawMap == true)
     {
-      center: { lat: $scope.intiLat, lng: $scope.initLng},
-      zoom: $scope.initZoom
-    };
-    
-    $scope.currMap = new google.maps.Map(document.getElementById('map-canvas'),
-                                         mapOptions);
-                                  
-    google.maps.event.addListener($scope.currMap, 'idle', function() { updateMap($scope); });
-    google.maps.event.addListener($scope.currMap, 'zoom_changed', function() { clearMap($scope); });
-    google.maps.event.addListener($scope.currMap, 'dragstart', function() { clearMap($scope); });
-    
-    /* Create new Heatmap options */
-    $scope.heatMap = new google.maps.visualization.HeatmapLayer(
-    {
-      data: $scope.heatmapData,
-      dissipating: true,
-      maxIntensity: 110,
-      radius: ((($( window ).width() / $scope.hResolution) + ($( window ).height() / $scope.vResolution)) / 1.8),
-      opacity: 0.21
-    });
-    
-    /* Draw haet map in current map */
-    $scope.heatMap.setMap($scope.currMap);
+      var mapOptions  = 
+      {
+        center: { lat: $scope.intiLat, lng: $scope.initLng},
+        zoom: $scope.initZoom
+      };
+      
+      $scope.currMap = new google.maps.Map(document.getElementById('map-canvas'),
+                                           mapOptions);
+                                    
+      google.maps.event.addListener($scope.currMap, 'idle', function() { updateMap($scope); });
+      google.maps.event.addListener($scope.currMap, 'zoom_changed', function() { clearMap($scope); });
+      google.maps.event.addListener($scope.currMap, 'dragstart', function() { clearMap($scope); });
+      
+      /* Create new Heatmap options */
+      $scope.heatMap = new google.maps.visualization.HeatmapLayer(
+      {
+        data: $scope.heatmapData,
+        dissipating: true,
+        maxIntensity: 110,
+        radius: ((($( window ).width() / $scope.hResolution) + ($( window ).height() / $scope.vResolution)) / 1.8),
+        opacity: 0.21
+      });
+      
+      /* Draw haet map in current map */
+      $scope.heatMap.setMap($scope.currMap);
+      
+      /* Draw the grid lines */
+      $scope.drawGridLinesFn(false);
+    }
   }
   else
   {                
     updateMap($scope);
   }
 }
+/*-----------------------------------------------------------------------------------------------*/
 
+/*-----------------------------------------------------------------------------------------------*/
 function distBetPoints(srcLat, srcLng, destLat, destLng)
 {
   var piVal           = 3.14159;
@@ -241,3 +298,33 @@ function distBetPoints(srcLat, srcLng, destLat, destLng)
   
   return distance;
 }
+/*-----------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------*/
+function updateFilterState($scope, filterId, idx)
+{
+  $scope.filters[filterId].items[idx].enabled = !$scope.filters[filterId].items[idx].enabled;
+  
+  $scope.filters[filterId].allFilterActive   = true;
+  $scope.filters[filterId].someFilterActive  = false;
+  $scope.filters[filterId].noFilterActive    = true;
+    
+  for(i=0;i<$scope.filters[filterId].items.length;i++)
+  {
+    if($scope.filters[filterId].items[i].enabled == false)
+    {
+      $scope.filters[filterId].allFilterActive   = false;
+    }
+    else
+    {
+      $scope.filters[filterId].someFilterActive  = true;
+      $scope.filters[filterId].noFilterActive    = false;
+    }
+  }
+  
+  if($scope.filters[filterId].allFilterActive == true)
+  {
+    $scope.filters[filterId].someFilterActive = false;
+  }
+}
+/*-----------------------------------------------------------------------------------------------*/

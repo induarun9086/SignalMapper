@@ -1,14 +1,24 @@
-html {width: 100%; height:100%; margin: 0px; padding: 0px; font-size:12px;}
-body {width: 100%; height: 100%; margin:0px; padding: 0px; border: 1px solid black; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90JAgkbO9KBFpoAAAA2SURBVDjLY7x06dJ/BihgZWaGMRl+//3LQIw4EwOFgGIDWMhxNrL4IPACOc4ejYXRWKB6LAAALWo2qpvFrioAAAAASUVORK5CYII=);}
-h1 {font-size:180%; font-weight:bold; font-family:Play; text-align: center; padding:0.3%; border:0px; border-bottom:2px solid black; margin:0px;}
+html {width: 100%; height:100%; margin: 0px; padding: 0px;}
+body {width: 100%; height: 100%; margin:0px; padding: 0px; border: 0px; font-family:Lato; font-size:12px;}
+h1 {font-size:180%; font-weight:bold; font-family:Lato; text-align: center; padding:1.5%; border:0px; margin:0px;}
 .mainBody {width: 100%; height: 100%; margin:0px; padding: 0px;}
 .innerBox {width: 99%; height: 99%; margin:0px; padding: 0.5%;}
-.optionsBar {position:fixed; top:0px; left:0px; right:85%; bottom:3%; font-size:120%; font-weight:bold; font-family:Play; text-align: center; padding:0px; border:1px solid black;}
-.mapContainer{position:fixed; top:0px; left:15%; right:0px; bottom:3%; border: 0px; border:1px solid black;}
+.controlBar {position:fixed; top:0px; left:0px; right:85%; bottom:3%; font-size:99%; font-weight:bold; font-family:Lato; text-align: center; padding:0px; border:0px;}
+.mapContainer{position:fixed; top:0px; left:15%; right:0px; bottom:3%; border:0px; border-left:1px solid #999999;}
 .mapCanvas {width:100%; height:100%; padding:0px;}
-.fotterBar {position:fixed; top:97%; left:0px; right:0px; bottom:0px; font-size:84%; font-weight:bold; font-family:Lato; text-align: center; padding:0px; border:1px solid black; vertical-align:middle; color: grey;}
-.filterBlock{font-size:99%; font-weight:bold; font-family:Play; text-align: left; padding:0px;}
-.optionsBlock{font-size:99%; font-weight:bold; font-family:Play; text-align: left; padding:0px;}
-.filterHeader{font-size:150%; font-weight:bold; font-family:Play; text-align: center; padding:0px; border:1px solid black;}
-.optionHeader{font-size:150%; font-weight:bold; font-family:Play; text-align: center; padding:0px; border:1px solid black;}
-.allCB{float:right; font-size:54%; text-align:right;}
+.fotterBar {position:fixed; top:97%; left:0px; right:0px; bottom:0px; font-size:72%; font-weight:bold; font-family:Lato; text-align: center; padding:0px; border:0px; border-top:1px solid #afafaf; vertical-align:middle; color: grey;}
+.filterBlock{width:100%; font-size:96%; font-weight:bold; font-family:Lato; text-align:left; padding:0px;  border:0px; margin:0px; margin-top:0.9%;}
+.filterHeader{width:99.1%; font-size:132%; font-weight:bold; font-family:Lato; text-align:center; padding:0.9%; border:0px; border-top:1px solid #afafaf; border-bottom:1px solid #afafaf; cursor:pointer; background-color:#f0f0ff;}
+.allFiltersActive:after{float:right; font-family:Lato; color:green; padding:0px; padding-right:3%; font-weight:bold; content:" \2713  ";}
+.someFiltersActive:after{float:right; font-family:Lato; color:brown; padding:0px; padding-right:3%; font-weight:bold; content:" \2022  ";}
+.noFiltersActive:after{float:right; font-family:Lato; color:red; padding:0px; padding-right:3%; font-weight:bold; content:" \2718  ";}
+.filterItem{text-align:left; padding:0.9%; padding-left:12%; border:0px; border-bottom:1px solid #cfcfcf; cursor:pointer; background-color:#fff0f0;}
+.filterItem:after{float:right; font-family:Lato; color:red; padding:0px; padding-right:9%; font-weight:bold; content:" \2718 ";}
+.activeFilter{background-color:#f0fff0;}
+.activeFilter:after{float:right; font-family:Lato; color:green; padding:0px; padding-right:9%; font-weight:bold; content:" \2713 ";}
+.optionsBlock{width:100%; font-size:96%; font-weight:bold; font-family:Lato; text-align:left; padding:0px; border:0px; margin:0px; margin-top:0.9%;}
+.optionHeader{width:99.1%; font-size:132%; font-weight:bold; font-family:Lato; text-align:center; padding:0.9%; border:0px; border-top:1px solid #afafaf; border-bottom:1px solid #afafaf; background-color:#f0f0ff;}
+.boolOptionItem{text-align:left; padding:1.5%; padding-left:12%; border:0px; border-bottom:1px solid #cfcfcf; cursor:pointer;}
+.boolOptionItem:after{float:right; font-family:Lato; font-size:99%; color:red; padding:0px; margin:0px; margin-right:9%; font-weight:bold; content:"\2022\a0\a0\a0"; border:1px solid red; border-radius:24%;}
+.boolOptionEnabled{}
+.boolOptionEnabled:after{float:right; font-family:Lato; font-size:99%; color:green; padding:0px; margin:0px; margin-right:9%; font-weight:bold; content:"\a0\a0\a0\2022"; border:1px solid green; border-radius:24%;}

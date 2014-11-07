@@ -18,27 +18,18 @@
     
   </head>
   
-  <body>
+  <body onresize="resizeMe()">
     <div class="mainBody" data-ng-app="" data-ng-controller="updateMapController">
-      <div class="optionsBar"> 
+      <div class="controlBar"> 
         <h1>Signal Mapper</h1>
         <div class="innerBox">
-          <br />
-          <div class="filterBlock">
-            <div class="filterHeader"> Operators <span class="allCB">[<input type="checkbox" /> All]</span></div>
-            <ul><li data-ng-repeat="operator in operators"><input type="checkbox" />{{operator.name}}</li></ul>
-          </div>
-          <div class="filterBlock">
-            <div class="filterHeader"> Technologies <span class="allCB">[<input type="checkbox" /> All]</span></div>
-            <ul><li data-ng-repeat="technology in technologies"><input type="checkbox" />{{technology.name}}</li></ul>
-          </div>
-          <div class="filterBlock">
-            <div class="filterHeader"> Datasets <span class="allCB">[<input type="checkbox" /> All]</span></div>
-            <ul><li data-ng-repeat="dataset in datasets"><input type="checkbox" />{{dataset.name}}</li></ul>
+          <div class="filterBlock" data-ng-repeat="filter in filters" data-ng-init="filterId=$index">
+            <div data-ng-class="{filterHeader:1, allFiltersActive:filter.allFilterActive, someFiltersActive:filter.someFilterActive, noFiltersActive:filter.noFilterActive}"> {{filter.name}} </div>
+            <div data-ng-class="{filterItem:1, activeFilter:filterItem.enabled}" data-ng-init="filterItemIdx=$index" data-ng-click="updateFilterState(filterId, filterItemIdx);" data-ng-repeat="filterItem in filter.items">{{filterItem.name}}</div>
           </div>
           <div class="optionsBlock">
             <div class="optionHeader"> Options </div><br />
-            <input type="checkbox" data-ng-model="drawGrid" data-ng-change="drawGridLinesFn()"/>&nbsp;Draw Grid Lines<br /><br />
+            <div data-ng-class="{boolOptionItem:1, boolOptionEnabled:drawGrid}" data-ng-click="drawGridLinesFn(true);"> Draw Grid Lines </div>
           </div>
         </div>
       </div>
