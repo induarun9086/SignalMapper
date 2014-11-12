@@ -1,10 +1,13 @@
 html {width: 100%; height:100%; margin: 0px; padding: 0px;}
 body {width: 100%; height: 100%; margin:0px; padding: 0px; border: 0px; font-family:Lato; font-size:12px;}
 h1 {font-size:180%; font-weight:bold; font-family:Lato; text-align: center; padding:1.5%; border:0px; margin:0px;}
+.transparentCover{position:fixed; top:0px; left:0px; width: 100%; height: 100%; margin:0px; padding: 0px; border:0px; z-index:99999999; display:none;}
 .mainBody {width: 100%; height: 100%; margin:0px; padding: 0px;}
 .innerBox {width: 99%; height: 99%; margin:0px; padding: 0.5%;}
-.controlBar {position:fixed; top:0px; left:0px; right:85%; bottom:3%; font-size:99%; font-weight:bold; font-family:Lato; text-align: center; padding:0px; border:0px;}
-.mapContainer{position:fixed; top:0px; left:15%; right:0px; bottom:3%; border:0px; border-left:1px solid #999999;}
+.controlBar {position:fixed; top:0px; left:0px; right:81%; bottom:3%; font-size:99%; font-weight:bold; font-family:Lato; text-align: center; padding:0px; border:0px;}
+.resizeVertSepBar{position:fixed; top:0px; left:19%; right:80.7%; bottom:3%; font-size:99%; font-weight:bold; font-family:Lato; text-align: center; padding:0px; margin:0px; border:1px solid #999999; background:#f0f0ff url('images/horiResizeIcon.png') no-repeat center center; background-size:100% 3%;}
+.resizeVertSepBar:hover{cursor:col-resize;}
+.mapContainer{position:fixed; top:0px; left:19.3%; right:0px; bottom:3%; border:0px;}
 .mapCanvas {width:100%; height:100%; padding:0px;}
 .fotterBar {position:fixed; top:97%; left:0px; right:0px; bottom:0px; font-size:72%; font-weight:bold; font-family:Lato; text-align: center; padding:0px; border:0px; border-top:1px solid #afafaf; vertical-align:middle; color: grey;}
 .filterBlock{width:100%; font-size:96%; font-weight:bold; font-family:Lato; text-align:left; padding:0px;  border:0px; margin:0px; margin-top:0.9%;}
@@ -18,7 +21,7 @@ h1 {font-size:180%; font-weight:bold; font-family:Lato; text-align: center; padd
 .activeFilter:after{float:right; font-family:Lato; color:green; padding:0px; padding-right:9%; font-weight:bold; content:" \2713 ";}
 .optionsBlock{width:100%; font-size:96%; font-weight:bold; font-family:Lato; text-align:left; padding:0px; border:0px; margin:0px; margin-top:0.9%;}
 .optionHeader{width:99.1%; font-size:132%; font-weight:bold; font-family:Lato; text-align:center; padding:0.9%; border:0px; border-top:1px solid #afafaf; border-bottom:1px solid #afafaf; background-color:#f0f0ff;}
-.boolOptionItem{text-align:left; padding:1.5%; padding-left:12%; border:0px; border-bottom:1px solid #cfcfcf; cursor:pointer;}
-.boolOptionItem:after{float:right; font-family:Lato; font-size:99%; color:red; padding:0px; margin:0px; margin-right:9%; font-weight:bold; content:"\2022\a0\a0\a0"; border:1px solid red; border-radius:24%;}
+.boolOptionItem{text-align:left; padding:1.5%; padding-left:12%; border:0px; border-bottom:1px solid #cfcfcf; cursor:pointer; background-color:#f0f0f0;}
+.boolOptionItem:after{float:right; font-family:Lato; font-size:99%; color:red; padding:0px; margin:0px; margin-right:9%; font-weight:bold; content:"\2022\a0\a0\a0"; border:1px solid red; border-radius:24%; background-color:#fff0f0;}
 .boolOptionEnabled{}
-.boolOptionEnabled:after{float:right; font-family:Lato; font-size:99%; color:green; padding:0px; margin:0px; margin-right:9%; font-weight:bold; content:"\a0\a0\a0\2022"; border:1px solid green; border-radius:24%;}
+.boolOptionEnabled:after{float:right; font-family:Lato; font-size:99%; color:green; padding:0px; margin:0px%; margin-right:9%; font-weight:bold; content:"\a0\a0\a0\2022"; border:1px solid green; border-radius:24%; background-color:#f0fff0;}

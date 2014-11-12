@@ -21,6 +21,60 @@ function resizeMe()
 /*-----------------------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------------------------------*/
+function startResizeControlBar($scope, evtObj)
+{
+  evtObj.preventDefault();
+  $(".transparentCover").css("display", "block");
+  $scope.startCtrlBarResize = true;
+  $scope.mouseXPos          = evtObj.pageX;
+  $("html").css("cursor", "col-resize");
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------*/
+function resizeControlBar($scope, evtObj)
+{ 
+  if($scope.startCtrlBarResize == true)
+  {  
+    var changeDelta  = (evtObj.pageX - $scope.mouseXPos) * 0.1;
+  
+    $scope.mouseXPos = evtObj.pageX;
+    
+    $scope.ctrlBarWidth += changeDelta;
+    
+    if($scope.ctrlBarWidth >= 27)
+    {
+      $scope.ctrlBarWidth = 27;
+    }
+    else if($scope.ctrlBarWidth <= 15)
+    {
+      $scope.ctrlBarWidth = 15;
+    }
+    else
+    {
+    }
+    
+    $(".controlBar").css("right", (100 - $scope.ctrlBarWidth) + "%");
+    $(".resizeVertSepBar").css("left", ($scope.ctrlBarWidth) + "%");
+    $(".resizeVertSepBar").css("right", (99.7 - $scope.ctrlBarWidth) + "%");
+    $(".mapContainer").css("left", ($scope.ctrlBarWidth + 0.3) + "%");
+  }
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------*/
+function stopResizeControlBar($scope, evtObj)
+{
+  if($scope.startCtrlBarResize == true)
+  {
+    $scope.startCtrlBarResize = false;
+    $("html").css("cursor", "default");
+    $(".transparentCover").css("display", "none");
+    google.maps.event.trigger($scope.currMap, 'resize');
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------*/
 function getSignalData($scope)
 {
   var ajaxCfg = {method:"post", url:"/getSignalData", params:{numPoints: $scope.locationArray.length}, data:JSON.stringify($scope.locationArray)};
@@ -227,6 +281,8 @@ function updateMapController($scope, $http)
     $scope.tiles                  = [];
     $scope.currHoriLngDelta       = 0;
     $scope.currVertLatDelta       = 0;
+    $scope.startCtrlBarResize     = false;
+    $scope.ctrlBarWidth           = 19;
     
     $scope.drawGridLinesFn        = function (toggle) { drawGridLines($scope, toggle); };
     $scope.updateFilterState      = function (filterId, idx) { updateFilterState($scope, filterId, idx); };    
@@ -240,6 +296,10 @@ function updateMapController($scope, $http)
                             items:[{name:'Local', enabled:true}, {name:'Global', enabled:true}]}];
 
     resizeMe();
+    
+    $("#controlAndMapSepBar").mousedown(function(evtObj) { startResizeControlBar($scope, evtObj); } );
+    $(document).mousemove(function(evtObj) { resizeControlBar($scope, evtObj);      } );    
+    $(document).mouseup(function()   { stopResizeControlBar($scope);  } );
   
     if(drawMap == true)
     {
@@ -252,9 +312,9 @@ function updateMapController($scope, $http)
       $scope.currMap = new google.maps.Map(document.getElementById('map-canvas'),
                                            mapOptions);
                                     
-      google.maps.event.addListener($scope.currMap, 'idle', function() { updateMap($scope); });
-      google.maps.event.addListener($scope.currMap, 'zoom_changed', function() { clearMap($scope); });
-      google.maps.event.addListener($scope.currMap, 'dragstart', function() { clearMap($scope); });
+      google.maps.event.addListener($scope.currMap, 'idle', function() { updateMap($scope); } );
+      google.maps.event.addListener($scope.currMap, 'zoom_changed', function() { clearMap($scope); } );
+      google.maps.event.addListener($scope.currMap, 'dragstart', function() { clearMap($scope); } );
       
       /* Create new Heatmap options */
       $scope.heatMap = new google.maps.visualization.HeatmapLayer(
