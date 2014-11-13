@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.0.1.RELEASE</spring.version>
 		<build.directory>./war/WEB-INF</build.directory>
-		<datanucleus-core.version>3.1.3</datanucleus-core.version>
+		<datanucleus.version>3.1.3</datanucleus.version>
 	</properties>
 	<!-- Spring dependencies -->
 
@@ -61,12 +61,12 @@
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-core</artifactId>
-			<version>3.1.3</version>
+			<version>${datanucleus.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-api-jpa</artifactId>
-			<version>3.1.3</version>
+			<version>${datanucleus.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.geronimo.specs</groupId>
@@ -74,9 +74,9 @@
 			<version>1.0</version>
 		</dependency>
 		<dependency>
-			<groupId>javax.jdo</groupId>
-			<artifactId>jdo-api</artifactId>
-			<version>3.0.1</version>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-enhancer</artifactId>
+			<version>3.1.1</version>
 		</dependency>
 
 		<!-- JPA dependencies -->
@@ -124,6 +124,22 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>default-war</id>
+						<phase>prepare-package</phase>
+						<configuration>
+							<failOnMissingWebXml>false</failOnMissingWebXml>
+							<archiveClasses>false</archiveClasses>
+							<archive>
+								<manifest>
+									<addClasspath>true</addClasspath>
+									<classpathPrefix />
+								</manifest>
+							</archive>
+						</configuration>
+					</execution>
+				</executions>
 				<version>2.3</version>
 				<configuration>
 					<archiveClasses>true</archiveClasses>
@@ -150,22 +166,42 @@
 					</execution>
 				</executions>
 			</plugin>
-			 <plugin>
-        <groupId>org.datanucleus</groupId>
-        <artifactId>maven-datanucleus-plugin</artifactId>
-        <version>3.1.3</version>
-        <configuration>
-            <verbose>true</verbose>
-        </configuration>
-        <executions>
-            <execution>
-                <phase>process-classes</phase>
-                <goals>
-                    <goal>enhance</goal>
-                </goals>
-            </execution>
-        </executions>
-    </plugin>
+			<plugin>
+				<groupId>org.datanucleus</groupId>
+				<artifactId>maven-datanucleus-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<api>JPA</api>
+					<metadataDirectory>${build.directory}/classes/com/signalmapper/data/model</metadataDirectory>
+					<metadataIncludes>**/*.class</metadataIncludes>
+					<persistenceUnitName>transactions-optional</persistenceUnitName>
+					<verbose>true</verbose>
+					<resources>
+						<resource>
+							<filtering>true</filtering>
+							<directory>src/test/resources/META-INF</directory>
+							<includes>
+								<include>persistence.xml</include>
+							</includes>
+						</resource>
+					</resources>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.datanucleus</groupId>
+						<artifactId>datanucleus-core</artifactId>
+						<version>${datanucleus.version}</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>enhance</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
