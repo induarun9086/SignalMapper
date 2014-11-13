@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-  
     <!-- Style sheets -->
     <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    
     <!-- Scripts -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-FDYV-XyExcrU-XhS3G59-sBpuhoDJuA"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=false"></script>
     <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
-    
     <title> Signal Mapper </title>
-    
   </head>
-  
   <body onresize="resizeMe()">
+    <!-- Transparent Blocking Div used when resizing -->
     <div class="transparentCover"></div>
+    <!-- Container for the main app -->
     <div class="mainBody" data-ng-app="" data-ng-controller="updateMapController">
+      <!-- Container for the control bar at the left -->
       <div class="controlBar"> 
         <h1>Signal Mapper</h1>
         <div class="innerBox">
+          <!-- Filters -->
           <div class="filterBlock" data-ng-repeat="filter in filters" data-ng-init="filterId=$index">
             <div data-ng-class="{filterHeader:1, allFiltersActive:filter.allFilterActive, someFiltersActive:filter.someFilterActive, noFiltersActive:filter.noFilterActive}"> {{filter.name}} </div>
             <div data-ng-class="{filterItem:1, activeFilter:filterItem.enabled}" data-ng-init="filterItemIdx=$index" data-ng-click="updateFilterState(filterId, filterItemIdx);" data-ng-repeat="filterItem in filter.items">{{filterItem.name}}</div>
           </div>
+          <!-- Options -->
           <div class="optionsBlock">
             <div class="optionHeader"> Options </div>
-            <div data-ng-class="{boolOptionItem:1, boolOptionEnabled:drawGrid}" data-ng-click="drawGridLinesFn(true);"> Draw Grid Lines </div>
+            <div data-ng-class="{optionItem:1, boolOptionItem:1, boolOptionEnabled:drawGrid}" data-ng-click="drawGridLinesFn(true);"> Draw Grid Lines </div>
+            <div data-ng-class="{optionItem:1, sliderOptionItem:1}" id="transpSlider"> Overlay Transparency </div>
           </div>
         </div>
       </div>
+      <!-- Resize bar -->
       <div class="resizeVertSepBar" id="controlAndMapSepBar"> </div>
+      <!-- Map Container -->
       <div class="mapContainer"> <div class="mapCanvas" id="map-canvas"></div></div>
+      <!-- Fotter bar -->
       <div class="fotterBar"> 
         <div class="innerBox"> <span style="font-size:150%; vertical-align:middle;"> &copy; </span> 2014. All rights reserved </div>
       </div>

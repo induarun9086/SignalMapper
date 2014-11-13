@@ -32,14 +32,23 @@ function startResizeControlBar($scope, evtObj)
 /*-----------------------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------------------------------*/
-function resizeControlBar($scope, evtObj)
+function startTranspProgBarMove($scope, evtObj)
+{
+  evtObj.preventDefault();
+  $scope.transpProgBarMove  = true;
+  $scope.mouseXPos          = evtObj.pageX;
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------*/
+function handleMouseMove($scope, evtObj)
 { 
+  var changeDelta  = (evtObj.pageX - $scope.mouseXPos) * 0.1;
+  
+  $scope.mouseXPos = evtObj.pageX;
+    
   if($scope.startCtrlBarResize == true)
   {  
-    var changeDelta  = (evtObj.pageX - $scope.mouseXPos) * 0.1;
-  
-    $scope.mouseXPos = evtObj.pageX;
-    
     $scope.ctrlBarWidth += changeDelta;
     
     if($scope.ctrlBarWidth >= 27)
@@ -59,11 +68,55 @@ function resizeControlBar($scope, evtObj)
     $(".resizeVertSepBar").css("right", (99.7 - $scope.ctrlBarWidth) + "%");
     $(".mapContainer").css("left", ($scope.ctrlBarWidth + 0.3) + "%");
   }
+  else if($scope.transpProgBarMove == true)
+  {
+    $scope.transpProgBarVal += changeDelta;
+    
+    if($scope.transpProgBarVal >= 12)
+    {
+      $(".sliderOptionItem:after").css("content", "000");
+    }
+    else if($scope.transpProgBarVal >= 24)
+    {
+      $(".sliderOptionItem:after").css("content", "000");
+    }
+    else if($scope.transpProgBarVal >= 36)
+    {
+      $(".sliderOptionItem:after").css("content", "000");
+    }
+    else if($scope.transpProgBarVal >= 48)
+    {
+      $(".sliderOptionItem:after").css("content", "000");
+    }
+    else if($scope.transpProgBarVal >= 60)
+    {
+      $(".sliderOptionItem:after").css("content", "000");
+    }
+    else if($scope.transpProgBarVal >= 72)
+    {
+      $(".sliderOptionItem:after").css("content", "000");
+    }
+    else if($scope.transpProgBarVal >= 84)
+    {
+      $(".sliderOptionItem:after").css("content", "000");
+    }
+    else if($scope.transpProgBarVal >= 96)
+    {
+      $(".sliderOptionItem:after").css("content", "000");
+    }
+    else
+    {
+      $(".sliderOptionItem:after").css("content", "000");
+    }
+  }
+  else
+  {
+  }
 }
 /*-----------------------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------------------------------*/
-function stopResizeControlBar($scope, evtObj)
+function handleMouseUp($scope, evtObj)
 {
   if($scope.startCtrlBarResize == true)
   {
@@ -71,6 +124,13 @@ function stopResizeControlBar($scope, evtObj)
     $("html").css("cursor", "default");
     $(".transparentCover").css("display", "none");
     google.maps.event.trigger($scope.currMap, 'resize');
+  }
+  else if($scope.transpProgBarMove == true)
+  {
+    $scope.transpProgBarMove = false;
+  }
+  else
+  {
   }
 }
 
@@ -283,6 +343,8 @@ function updateMapController($scope, $http)
     $scope.currVertLatDelta       = 0;
     $scope.startCtrlBarResize     = false;
     $scope.ctrlBarWidth           = 19;
+    $scope.transpProgBarMove      = false;
+    $scope.transpProgBarVal       =  0.21;
     
     $scope.drawGridLinesFn        = function (toggle) { drawGridLines($scope, toggle); };
     $scope.updateFilterState      = function (filterId, idx) { updateFilterState($scope, filterId, idx); };    
@@ -298,8 +360,9 @@ function updateMapController($scope, $http)
     resizeMe();
     
     $("#controlAndMapSepBar").mousedown(function(evtObj) { startResizeControlBar($scope, evtObj); } );
-    $(document).mousemove(function(evtObj) { resizeControlBar($scope, evtObj);      } );    
-    $(document).mouseup(function()   { stopResizeControlBar($scope);  } );
+    $("#transpSlider").mousedown(function(evtObj) { startTranspProgBarMove($scope, evtObj); } );
+    $(document).mousemove(function(evtObj) { handleMouseMove($scope, evtObj);      } );    
+    $(document).mouseup(function()   { handleMouseUp($scope);  } );
   
     if(drawMap == true)
     {
@@ -323,7 +386,7 @@ function updateMapController($scope, $http)
         dissipating: true,
         maxIntensity: 110,
         radius: ((($( window ).width() / $scope.hResolution) + ($( window ).height() / $scope.vResolution)) / 1.8),
-        opacity: 0.21
+        opacity: $scope.transpProgBarVal
       });
       
       /* Draw haet map in current map */
