@@ -22,9 +22,13 @@ h1 {font-size:180%; font-weight:bold; font-family:Lato; text-align: center; padd
 .optionsBlock{width:100%; font-size:96%; font-weight:bold; font-family:Lato; text-align:left; padding:0px; border:0px; margin:0px; margin-top:0.9%;}
 .optionHeader{width:99.1%; font-size:132%; font-weight:bold; font-family:Lato; text-align:center; padding:0.9%; border:0px; border-top:1px solid #afafaf; border-bottom:1px solid #afafaf; background-color:#f0f0ff;}
 .optionItem{text-align:left; padding:1.5%; padding-left:6%; border:0px; border-bottom:1px solid #cfcfcf; cursor:pointer; background-color:#f0f0f0;}
-.boolOptionItem{}
 .boolOptionItem:after{float:right; font-family:Lato; font-size:99%; text-align:right; color:red; padding:0px; margin:0px; margin-right:9%; font-weight:bold; content:"\2022\a0\a0\a0"; border:1px solid red; border-radius:24%; background-color:#fff0f0;}
-.boolOptionEnabled{}
 .boolOptionEnabled:after{float:right; font-family:Lato; font-size:99%; text-align:right; color:green; padding:0px; margin:0px%; margin-right:9%; font-weight:bold; content:"\a0\a0\a0\2022"; border:1px solid green; border-radius:24%; background-color:#f0fff0;}
-.sliderOptionItem{}
-.sliderOptionItem:after{float:right; font-size:96%; text-align:right; content:"\2500\2500\2500\2022\2500\2500\2500\2500"; border:1px solid green; border-radius:24%; background-color:#f0fff0;}
+.sliderOptionItem0:after{float:right; font-size:96%; text-align:right; content:"\2022\2500\2500\2500\2500\2500\2500\2500"; border:1px solid green; border-radius:24%; background-color:#f0fff0;}
+.sliderOptionItem1:after{float:right; font-size:96%; text-align:right; content:"\2500\2022\2500\2500\2500\2500\2500\2500"; border:1px solid green; border-radius:24%; background-color:#f0fff0;}
+.sliderOptionItem2:after{float:right; font-size:96%; text-align:right; content:"\2500\2500\2022\2500\2500\2500\2500\2500"; border:1px solid green; border-radius:24%; background-color:#f0fff0;}
+.sliderOptionItem3:after{float:right; font-size:96%; text-align:right; content:"\2500\2500\2500\2022\2500\2500\2500\2500"; border:1px solid green; border-radius:24%; background-color:#f0fff0;}
+.sliderOptionItem4:after{float:right; font-size:96%; text-align:right; content:"\2500\2500\2500\2500\2022\2500\2500\2500"; border:1px solid green; border-radius:24%; background-color:#f0fff0;}
+.sliderOptionItem5:after{float:right; font-size:96%; text-align:right; content:"\2500\2500\2500\2500\2500\2022\2500\2500"; border:1px solid green; border-radius:24%; background-color:#f0fff0;}
+.sliderOptionItem6:after{float:right; font-size:96%; text-align:right; content:"\2500\2500\2500\2500\2500\2500\2022\2500"; border:1px solid green; border-radius:24%; background-color:#f0fff0;}
+.sliderOptionItem7:after{float:right; font-size:96%; text-align:right; content:"\2500\2500\2500\2500\2500\2500\2500\2022"; border:1px solid green; border-radius:24%; background-color:#f0fff0;}

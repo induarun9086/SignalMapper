@@ -70,44 +70,9 @@ function handleMouseMove($scope, evtObj)
   }
   else if($scope.transpProgBarMove == true)
   {
-    $scope.transpProgBarVal += changeDelta;
-    
-    if($scope.transpProgBarVal >= 12)
-    {
-      $(".sliderOptionItem:after").css("content", "000");
-    }
-    else if($scope.transpProgBarVal >= 24)
-    {
-      $(".sliderOptionItem:after").css("content", "000");
-    }
-    else if($scope.transpProgBarVal >= 36)
-    {
-      $(".sliderOptionItem:after").css("content", "000");
-    }
-    else if($scope.transpProgBarVal >= 48)
-    {
-      $(".sliderOptionItem:after").css("content", "000");
-    }
-    else if($scope.transpProgBarVal >= 60)
-    {
-      $(".sliderOptionItem:after").css("content", "000");
-    }
-    else if($scope.transpProgBarVal >= 72)
-    {
-      $(".sliderOptionItem:after").css("content", "000");
-    }
-    else if($scope.transpProgBarVal >= 84)
-    {
-      $(".sliderOptionItem:after").css("content", "000");
-    }
-    else if($scope.transpProgBarVal >= 96)
-    {
-      $(".sliderOptionItem:after").css("content", "000");
-    }
-    else
-    {
-      $(".sliderOptionItem:after").css("content", "000");
-    }
+    $scope.transpProgBarVal += (changeDelta * 10);
+    $scope.sliderOptionPos   = "sliderOptionItem" + Math.round($scope.transpProgBarVal/12);
+    $scope.$digest();
   }
   else
   {
@@ -345,6 +310,7 @@ function updateMapController($scope, $http)
     $scope.ctrlBarWidth           = 19;
     $scope.transpProgBarMove      = false;
     $scope.transpProgBarVal       =  0.21;
+    $scope.sliderOptionPos        = "sliderOptionItem" + Math.round($scope.transpProgBarVal/12);
     
     $scope.drawGridLinesFn        = function (toggle) { drawGridLines($scope, toggle); };
     $scope.updateFilterState      = function (filterId, idx) { updateFilterState($scope, filterId, idx); };    
