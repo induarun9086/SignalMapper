@@ -70,9 +70,12 @@ function handleMouseMove($scope, evtObj)
   }
   else if($scope.transpProgBarMove == true)
   {
-    $scope.transpProgBarVal += (changeDelta * 10);
-    $scope.sliderOptionPos   = "sliderOptionItem" + Math.round($scope.transpProgBarVal/12);
+    $scope.transpProgBarVal += (changeDelta/7);
+    $scope.transpProgBarVal  = (($scope.transpProgBarVal >= 1.0)?(1.0):($scope.transpProgBarVal));
+    $scope.transpProgBarVal  = (($scope.transpProgBarVal <= 0.0)?(0.0):($scope.transpProgBarVal));
+    $scope.sliderOptionPos   = "sliderOptionItem" + Math.round($scope.transpProgBarVal * 7);
     $scope.$digest();
+    $scope.heatMap.set('opacity', $scope.transpProgBarVal);
   }
   else
   {
@@ -310,7 +313,7 @@ function updateMapController($scope, $http)
     $scope.ctrlBarWidth           = 19;
     $scope.transpProgBarMove      = false;
     $scope.transpProgBarVal       =  0.21;
-    $scope.sliderOptionPos        = "sliderOptionItem" + Math.round($scope.transpProgBarVal/12);
+    $scope.sliderOptionPos        = "sliderOptionItem" + Math.round($scope.transpProgBarVal * 7);
     
     $scope.drawGridLinesFn        = function (toggle) { drawGridLines($scope, toggle); };
     $scope.updateFilterState      = function (filterId, idx) { updateFilterState($scope, filterId, idx); };    
