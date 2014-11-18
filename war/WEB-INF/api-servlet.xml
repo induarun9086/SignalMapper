@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns:context="http://www.springframework.org/schema/context"
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:jee="http://www.springframework.org/schema/jee"
+    xmlns:lang="http://www.springframework.org/schema/lang"
     xmlns:mvc="http://www.springframework.org/schema/mvc"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:util="http://www.springframework.org/schema/util"
     xmlns="http://www.springframework.org/schema/beans"
-    xsi:schemaLocation="
-
-        http://www.springframework.org/schema/beans    
-
-        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
-
-        http://www.springframework.org/schema/context
-
-        http://www.springframework.org/schema/context/spring-context-4.0.xsd
-
-        http://www.springframework.org/schema/mvc
-
-        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
-        
-        http://www.springframework.org/schema/aop
-        
-        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd" >
-
-    <context:component-scan base-package="com.signalmapper.controllers" />
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd" >
 
     <bean
         id="messageAdapter"
@@ -36,5 +30,33 @@
             </list>
         </property>
     </bean>
+
+    <bean
+        id="entityManagerFactory"
+        class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean" 
+        lazy-init="true">
+
+        <property
+            name="persistenceUnitName"
+            value="transactions-optional" />
+    </bean>
+
+    <bean
+        id="transactionManager"
+        class="org.springframework.orm.jpa.JpaTransactionManager" >
+
+        <property
+            name="entityManagerFactory"
+            ref="entityManagerFactory" />
+    </bean>
+    
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+
+    <context:component-scan base-package="com.signalmapper" >
+    </context:component-scan>
+
+    <mvc:annotation-driven />
+
+    <tx:annotation-driven />
 
 </beans>

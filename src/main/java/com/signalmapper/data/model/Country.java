@@ -16,6 +16,9 @@ public class Country {
 
 	@Column(name = "Name")
 	private String name;
+	
+	@Column(name = "CountryCode")
+	private String code;
 
 	public Long getCountryID() {
 		return countryID;
@@ -31,6 +34,14 @@ public class Country {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 }

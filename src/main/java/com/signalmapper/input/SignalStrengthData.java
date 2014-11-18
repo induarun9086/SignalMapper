@@ -17,7 +17,7 @@ public class SignalStrengthData implements Serializable {
 	
 	private String operator;
 	
-	private String country;
+	private String countryCode;
 	
 	private int signalStrengthValue;
 
@@ -53,12 +53,12 @@ public class SignalStrengthData implements Serializable {
 		this.operator = operator;
 	}
 
-	public String getCountry() {
-		return country;
+	public String getCountryCode() {
+		return countryCode;
 	}
 
-	public void setCountry(String country) {
-		this.country = country;
+	public void setCountryCode(String countryCode) {
+		this.countryCode = countryCode;
 	}
 
 	public int getSignalStrengthValue() {
