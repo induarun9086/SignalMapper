@@ -1,5 +1,5 @@
 /*---------------------------- Global Constants -------------------------------------------------*/
-var drawMap = true;
+var drawMap = false;
 /*-----------------------------------------------------------------------------------------------*/
 
 /*---------------------------- Update font sizes when a resize ----------------------------------*/
@@ -319,10 +319,10 @@ function updateMapController($scope, $http)
     $scope.updateFilterState      = function (filterId, idx) { updateFilterState($scope, filterId, idx); };    
     $scope.httpFn                 = $http;
       
-    $scope.filters      = [{name:"Operators", allFilterActive:true, someFilterActive:false, noFilterActive:false, 
+    $scope.filters      = [{name:"Technologies", allFilterActive:true, someFilterActive:false, noFilterActive:false, 
                             items:[{name:'2G', enabled:true}, {name:'3G', enabled:true}, {name:'4G', enabled:true}, {name:'5G', enabled:true}]},
-                           {name:"Technologies", allFilterActive:true, someFilterActive:false, noFilterActive:false, 
-                            items:[{name:'Cellone', enabled:true}, {name:'Airtel', enabled:true}, {name:'Aircel', enabled:true}, {name:'Idea', enabled:true}]},
+                           {name:"Operators", allFilterActive:true, someFilterActive:false, noFilterActive:false, 
+                            items:[{name:'Cellone', enabled:true}, {name:'Airtel', enabled:true}, {name:'Aircel', enabled:true}, {name:'Idea', enabled:true}, {name:'Vodofone', enabled:true}, {name:'MTS', enabled:true}, {name:'Reliance', enabled:true}]},
                            {name:"Datasets", allFilterActive:true, someFilterActive:false, noFilterActive:false, 
                             items:[{name:'Local', enabled:true}, {name:'Global', enabled:true}]}];
 
