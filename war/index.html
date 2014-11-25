@@ -2,8 +2,11 @@
 <html>
   <head>
     <!-- Style sheets -->
-    <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Nova+Flat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Salsa' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Overlock' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <!-- Scripts -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
@@ -20,7 +23,7 @@
     <div class="mainBody" data-ng-app="" data-ng-controller="updateMapController">
       <!-- Container for the control bar at the left -->
       <div class="controlBar"> 
-        <h1>Signal Mapper</h1>
+        <h1><img rel="shortcut icon" src="/favicon1.ico" class="favicon" />Signal Mapper</h1>
         <div class="innerBox">
           <!-- Filters -->
           <div class="filterBlock" data-ng-repeat="filter in filters" data-ng-init="filterId=$index">
@@ -31,7 +34,7 @@
           <div class="optionsBlock">
             <div class="optionHeader"> Options </div>
             <div class="optionItem boolOptionItem" data-ng-class="{boolOptionEnabled:drawGrid}" data-ng-click="drawGridLinesFn(true);"> Draw Grid Lines </div>
-            <div class="optionItem" data-ng-class="sliderOptionPos" id="transpSlider"> Overlay Transparency </div>
+            <div class="optionItem sliderOptionItem" data-ng-class="sliderOptionPos" id="transpSlider"> Overlay Transparency </div>
           </div>
         </div>
       </div>
