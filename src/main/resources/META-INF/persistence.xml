@@ -11,23 +11,23 @@ org.datanucleus.api.jpa.PersistenceProviderImpl
         </provider>
 
         <class>
-com.signalmapper.data.model.Country
+com.signalmapper.data.model.Country
         </class>
 
         <class>
-com.signalmapper.data.model.Location
+com.signalmapper.data.model.Location
         </class>
 
         <class>
-com.signalmapper.data.model.Operator
+com.signalmapper.data.model.Operator
         </class>
 
         <class>
-com.signalmapper.data.model.SignalStrength
+com.signalmapper.data.model.SignalStrength
         </class>
 
         <class>
-com.signalmapper.data.model.Technology
+com.signalmapper.data.model.Technology
         </class>
 
         <properties>

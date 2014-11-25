@@ -2,29 +2,21 @@ package com.signalmapper.country;
 
 import java.util.logging.Logger;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
+import com.signalmapper.dao.GenericDaoJpaImpl;
 import com.signalmapper.data.model.Country;
 
-public class CountryDAOImpl implements CountryDAO {
+public class CountryDAOImpl extends GenericDaoJpaImpl<Country, Long>
+                            implements CountryDAO {
 	private static final Logger log = Logger.getLogger(CountryDAOImpl.class
 			.getName());
 
-	
-	private EntityManager entityManager;
-	
-	@PersistenceContext
-	public void setEntityManager(EntityManager entityManager)
-	{
-		this.entityManager = entityManager;
-	}
 
 	@Override
 	public void addCountry(Country country) {
 
 		try {
-			entityManager.persist(country);
+			
+			create(country);
 			log.info("Country inserted successfully : " + country.getName());
 
 		} catch (Exception e) {

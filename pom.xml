@@ -83,7 +83,7 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- Javax persistence -->
+		<!-- Datanucleus persistence -->
 		<dependency>
 			<groupId>com.google.appengine.orm</groupId>
 			<artifactId>datanucleus-appengine</artifactId>
@@ -109,8 +109,6 @@
 			<artifactId>datanucleus-enhancer</artifactId>
 			<version>3.1.1</version>
 		</dependency>
-
-		<!-- JPA dependencies -->
 		<dependency>
 			<groupId>javax.persistence</groupId>
 			<artifactId>persistence-api</artifactId>
@@ -151,7 +149,12 @@
 			<version>1.7.7</version>
 		</dependency>
 
-
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -224,7 +227,7 @@
 					<resources>
 						<resource>
 							<filtering>true</filtering>
-							<directory>src/test/resources/META-INF</directory>
+							<directory>src/resources/META-INF</directory>
 							<includes>
 								<include>persistence.xml</include>
 							</includes>
@@ -244,6 +247,43 @@
 						<goals>
 							<goal>enhance</goal>
 						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>generate-entity-metamodel</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+						<configuration>
+							<source>1.6</source>
+							<target>1.6</target>
+							<optimize>true</optimize>
+							<showDeprecation>true</showDeprecation>
+							<showWarnings>true</showWarnings>
+							<proc>only</proc>
+							<compilerArgument>-Aopenjpa.metamodel=true</compilerArgument>
+							<generatedSourcesDirectory>${build.directory}/generated-sources</generatedSourcesDirectory>
+							<compilerArguments>
+								<processor>org.apache.openjpa.persistence.meta.AnnotationProcessor6</processor>
+							</compilerArguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>compile</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+						<configuration>
+							<source>1.6</source>
+							<target>1.6</target>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>

@@ -42,5 +42,10 @@
 	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/spring-web-4.0.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/spring-webmvc-4.0.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="C:/Users/dinesharun/workspace/SignalMapper/war/WEB-INF/lib/transaction-api-1.1.jar"/>
+	<classpathentry kind="src" path="war/WEB-INF/generated-sources">
+		<attributes>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
