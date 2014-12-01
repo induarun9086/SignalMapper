@@ -176,6 +176,14 @@
 									<classpathPrefix />
 								</manifest>
 							</archive>
+							<webResources>
+								<!-- in order to interpolate version from pom into appengine-web.xml -->
+								<resource>
+									<directory>./war/WEB-INF</directory>
+									<filtering>true</filtering>
+									<targetPath>WEB-INF</targetPath>
+								</resource>
+							</webResources>
 						</configuration>
 					</execution>
 				</executions>

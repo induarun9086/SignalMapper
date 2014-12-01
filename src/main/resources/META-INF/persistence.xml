@@ -6,29 +6,12 @@
 
     <persistence-unit name="transactions-optional" >
 
-        <provider>
-org.datanucleus.api.jpa.PersistenceProviderImpl            
-        </provider>
-
-        <class>
-com.signalmapper.data.model.Country
-        </class>
-
-        <class>
-com.signalmapper.data.model.Location
-        </class>
-
-        <class>
-com.signalmapper.data.model.Operator
-        </class>
-
-        <class>
-com.signalmapper.data.model.SignalStrength
-        </class>
-
-        <class>
-com.signalmapper.data.model.Technology
-        </class>
+        <provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
+		<class>com.signalmapper.data.model.Country</class>
+		<class>com.signalmapper.data.model.Location</class>
+		<class>com.signalmapper.data.model.Operator</class>
+ 		<class>com.signalmapper.data.model.SignalStrength</class>
+		<class>com.signalmapper.data.model.Technology</class> 
 
         <properties>
 
@@ -57,8 +40,6 @@ com.signalmapper.data.model.Technology
                 value="WRITE_OWNED_CHILD_KEYS_TO_PARENTS" />
         </properties>
 
-        <provider>
-        </provider>
     </persistence-unit>
 
 </persistence>
