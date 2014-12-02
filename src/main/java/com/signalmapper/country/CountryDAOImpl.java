@@ -5,7 +5,9 @@ import java.util.logging.Logger;
 import com.signalmapper.dao.GenericDaoJpaImpl;
 import com.signalmapper.data.model.Country;
 
-public class CountryDAOImpl extends GenericDaoJpaImpl<Country, Long>
+import org.springframework.stereotype.Repository; 
+
+@Repository public class CountryDAOImpl extends GenericDaoJpaImpl<Country, Long>
                             implements CountryDAO {
 	private static final Logger log = Logger.getLogger(CountryDAOImpl.class
 			.getName());

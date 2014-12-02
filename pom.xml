@@ -218,6 +218,8 @@
 				<artifactId>maven-datanucleus-plugin</artifactId>
 				<version>3.0.2</version>
 				<configuration>
+          <fork>false</fork>
+          <useFileListFile>true</useFileListFile> 
 					<api>JPA</api>
 					<metadataDirectory>${build.directory}/classes/com/signalmapper/data/model</metadataDirectory>
 					<metadataIncludes>**/*.class</metadataIncludes>

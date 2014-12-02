@@ -1,4 +1,5 @@
 /logs
 /target
+/generated-sources
 /war/WEB-INF/classes
 /war/WEB-INF/lib
