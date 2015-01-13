@@ -2,7 +2,7 @@ package com.signalmapper.service;
 
 import org.springframework.stereotype.Component;
 
-import com.signalmapper.data.model.Technology;
+import com.signaldata.model.Technology;
 
 @Component
 public interface TechnologyService {

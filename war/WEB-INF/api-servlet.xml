@@ -34,7 +34,8 @@
     <bean
         id="entityManagerFactory"
         class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean" 
-        lazy-init="true">
+        lazy-init="true"
+        autowire="no">
 
         <property
             name="persistenceUnitName"
@@ -43,7 +44,8 @@
 
     <bean
         id="transactionManager"
-        class="org.springframework.orm.jpa.JpaTransactionManager" >
+        class="org.springframework.orm.jpa.JpaTransactionManager"
+        autowire="no" >
 
         <property
             name="entityManagerFactory"
@@ -51,8 +53,9 @@
     </bean>
     
     <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
-
+    
     <context:component-scan base-package="com.signalmapper" >
+      <!-- <context:exclude-filter type="regex" expression="com\.signalmapper\.data.*" /> -->
     </context:component-scan>
 
     <mvc:annotation-driven />

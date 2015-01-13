@@ -1,6 +1,6 @@
 package com.signalmapper.technology;
 
-import com.signalmapper.data.model.Technology;
+import com.signaldata.model.Technology;
 
 
 public interface TechnologyDAO {

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.signalmapper.data.model.Technology;
+import com.signaldata.model.Technology;
 import com.signalmapper.input.SignalStrengthData;
 import com.signalmapper.service.TechnologyService;
 

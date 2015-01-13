@@ -1,4 +1,4 @@
-package com.signalmapper.data.model;
+package com.signaldata.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

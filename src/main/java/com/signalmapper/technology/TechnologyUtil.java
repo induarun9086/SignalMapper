@@ -6,7 +6,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import com.signalmapper.data.model.Technology;
+import com.signaldata.model.Technology;
 
 public class TechnologyUtil {
 

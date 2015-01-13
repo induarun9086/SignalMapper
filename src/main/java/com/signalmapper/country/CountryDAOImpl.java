@@ -3,7 +3,7 @@ package com.signalmapper.country;
 import java.util.logging.Logger;
 
 import com.signalmapper.dao.GenericDaoJpaImpl;
-import com.signalmapper.data.model.Country;
+import com.signaldata.model.Country;
 
 import org.springframework.stereotype.Repository; 
 

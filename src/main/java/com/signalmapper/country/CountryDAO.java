@@ -1,6 +1,6 @@
 package com.signalmapper.country;
 
-import com.signalmapper.data.model.Country;
+import com.signaldata.model.Country;
 
 public interface CountryDAO {	
 	

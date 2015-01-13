@@ -1,0 +1,818 @@
+16:54:46,422 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JPA"
+16:54:46,454 (main) DEBUG [DataNucleus.Plugin] - Plugin Registry "org.datanucleus.plugin.EclipsePluginRegistry" not found. Falling back to DataNucleus registry. Reason : Class "org.eclipse.core.runtime.RegistryFactory" was not found in the CLASSPATH. Please check your specification and your CLASSPATH..
+16:54:46,454 (main) DEBUG [DataNucleus.Plugin] - Using PluginRegistry org.datanucleus.plugin.NonManagedPluginRegistry
+16:54:46,469 (main) DEBUG [DataNucleus.Plugin] - Registering bundle com.google.appengine.datanucleus version 2.1.1 at URL file:/C:/Documents%20and%20Settings/extern.kasipandian/.m2/repository/com/google/appengine/orm/datanucleus-appengine/2.1.2/datanucleus-appengine-2.1.2.jar.
+16:54:46,485 (main) DEBUG [DataNucleus.Plugin] - Loading extension points from plug-in file jar:file:/C:/Documents%20and%20Settings/extern.kasipandian/.m2/repository/com/google/appengine/orm/datanucleus-appengine/2.1.2/datanucleus-appengine-2.1.2.jar!/plugin.xml.
+16:54:46,500 (main) DEBUG [DataNucleus.Plugin] - Loading extensions from plug-in file jar:file:/C:/Documents%20and%20Settings/extern.kasipandian/.m2/repository/com/google/appengine/orm/datanucleus-appengine/2.1.2/datanucleus-appengine-2.1.2.jar!/plugin.xml.
+16:54:46,516 (main) DEBUG [DataNucleus.Plugin] - Registering bundle org.datanucleus.enhancer version 3.1.1 at URL file:/C:/Documents%20and%20Settings/extern.kasipandian/.m2/repository/org/datanucleus/datanucleus-enhancer/3.1.1/datanucleus-enhancer-3.1.1.jar.
+16:54:46,516 (main) DEBUG [DataNucleus.Plugin] - Loading extension points from plug-in file jar:file:/C:/Documents%20and%20Settings/extern.kasipandian/.m2/repository/org/datanucleus/datanucleus-enhancer/3.1.1/datanucleus-enhancer-3.1.1.jar!/plugin.xml.
+16:54:46,516 (main) DEBUG [DataNucleus.Plugin] - Loading extensions from plug-in file jar:file:/C:/Documents%20and%20Settings/extern.kasipandian/.m2/repository/org/datanucleus/datanucleus-enhancer/3.1.1/datanucleus-enhancer-3.1.1.jar!/plugin.xml.
+16:54:46,516 (main) DEBUG [DataNucleus.Plugin] - Registering bundle org.datanucleus version 3.1.1 at URL file:/C:/Documents%20and%20Settings/extern.kasipandian/.m2/repository/org/datanucleus/datanucleus-core/3.1.1/datanucleus-core-3.1.1.jar.
+16:54:46,532 (main) DEBUG [DataNucleus.Plugin] - Loading extension points from plug-in file jar:file:/C:/Documents%20and%20Settings/extern.kasipandian/.m2/repository/org/datanucleus/datanucleus-core/3.1.1/datanucleus-core-3.1.1.jar!/plugin.xml.
+16:54:46,547 (main) DEBUG [DataNucleus.Plugin] - Loading extensions from plug-in file jar:file:/C:/Documents%20and%20Settings/extern.kasipandian/.m2/repository/org/datanucleus/datanucleus-core/3.1.1/datanucleus-core-3.1.1.jar!/plugin.xml.
+16:54:46,563 (main) DEBUG [DataNucleus.Plugin] - Registering bundle org.datanucleus.api.jpa version 3.1.1 at URL file:/C:/Documents%20and%20Settings/extern.kasipandian/.m2/repository/org/datanucleus/datanucleus-api-jpa/3.1.1/datanucleus-api-jpa-3.1.1.jar.
+16:54:46,563 (main) DEBUG [DataNucleus.Plugin] - Loading extension points from plug-in file jar:file:/C:/Documents%20and%20Settings/extern.kasipandian/.m2/repository/org/datanucleus/datanucleus-api-jpa/3.1.1/datanucleus-api-jpa-3.1.1.jar!/plugin.xml.
+16:54:46,563 (main) DEBUG [DataNucleus.Plugin] - Loading extensions from plug-in file jar:file:/C:/Documents%20and%20Settings/extern.kasipandian/.m2/repository/org/datanucleus/datanucleus-api-jpa/3.1.1/datanucleus-api-jpa-3.1.1.jar!/plugin.xml.
+16:54:46,579 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.1) : Enhancement of classes
+16:54:46,579 (main) DEBUG [DataNucleus.Enhancer] - DataNucleus Enhancer : Classpath
+16:54:46,579 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Documents and Settings\extern.kasipandian\My Documents\Dinesh\Programs\apache-maven-3.2.3\bin\..\boot\plexus-classworlds-2.5.1.jar
+16:54:46,579 (main) DEBUG [DataNucleus.Persistence] - Java types support initialising ...
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [B (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [C (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [D (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [F (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [I (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [J (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [S (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Z (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.lang.Boolean; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.lang.Byte; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.lang.Character; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.lang.Double; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.lang.Float; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.lang.Integer; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.lang.Long; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.lang.Short; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.lang.Number; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.lang.String; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.math.BigInteger; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.math.BigDecimal; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.util.Date; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.util.Locale; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type [Ljava.lang.Enum; (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type boolean (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type byte (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type char (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type double (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type float (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type int (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type long (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type short (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.lang.Boolean (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.lang.Byte (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.lang.Character (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.lang.Double (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.lang.Float (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.lang.Integer (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.lang.Long (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.lang.Short (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.lang.Number (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.lang.String (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.lang.StringBuffer (persistent=false, DFG=false, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.lang.Enum (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.lang.Class (persistent=false, DFG=false, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.awt.image.BufferedImage (persistent=false, DFG=false, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.awt.Color (persistent=false, DFG=false, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.math.BigDecimal (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.math.BigInteger (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.net.URL (persistent=false, DFG=false, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.net.URI (persistent=false, DFG=false, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.sql.Date (persistent=false, DFG=false, embedded=false)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.sql.Time (persistent=false, DFG=false, embedded=false)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.sql.Timestamp (persistent=false, DFG=false, embedded=false)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Date (persistent=true, DFG=true, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Locale (persistent=true, DFG=false, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Currency (persistent=true, DFG=false, embedded=true)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Calendar (persistent=false, DFG=false, embedded=false)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.GregorianCalendar (persistent=false, DFG=false, embedded=false)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.UUID (persistent=false, DFG=false, embedded=false)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.TimeZone (persistent=false, DFG=false, embedded=false)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.ArrayList (persistent=true, DFG=false, embedded=false)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Arrays$ArrayList (persistent=true, DFG=false, embedded=false)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.BitSet (persistent=false, DFG=false, embedded=false)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection (persistent=true, DFG=false, embedded=false)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.HashMap (persistent=true, DFG=false, embedded=false)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.HashSet (persistent=true, DFG=false, embedded=false)
+16:54:46,594 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Hashtable (persistent=true, DFG=false, embedded=false)
+16:54:46,610 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.LinkedHashMap (persistent=true, DFG=false, embedded=false)
+16:54:46,610 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.LinkedHashSet (persistent=true, DFG=false, embedded=false)
+16:54:46,610 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.LinkedList (persistent=true, DFG=false, embedded=false)
+16:54:46,610 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List (persistent=true, DFG=false, embedded=false)
+16:54:46,610 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Map (persistent=true, DFG=false, embedded=false)
+16:54:46,610 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.PriorityQueue (persistent=false, DFG=false, embedded=false)
+16:54:46,610 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Properties (persistent=false, DFG=false, embedded=false)
+16:54:46,610 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Queue (persistent=false, DFG=false, embedded=false)
+16:54:46,610 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set (persistent=true, DFG=false, embedded=false)
+16:54:46,610 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.SortedSet (persistent=true, DFG=false, embedded=false)
+16:54:46,610 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.SortedMap (persistent=true, DFG=false, embedded=false)
+16:54:46,610 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Stack (persistent=false, DFG=false, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.TreeMap (persistent=true, DFG=false, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.TreeSet (persistent=true, DFG=false, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Vector (persistent=true, DFG=false, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type com.google.appengine.api.datastore.Blob (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type com.google.appengine.api.datastore.Category (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type com.google.appengine.api.datastore.Email (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type com.google.appengine.api.datastore.GeoPt (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type com.google.appengine.api.datastore.IMHandle (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type com.google.appengine.api.datastore.Key (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type com.google.appengine.api.datastore.Link (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type com.google.appengine.api.datastore.PhoneNumber (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type com.google.appengine.api.datastore.PostalAddress (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type com.google.appengine.api.datastore.Rating (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type com.google.appengine.api.datastore.ShortBlob (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type com.google.appengine.api.datastore.Text (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type com.google.appengine.api.blobstore.BlobKey (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type com.google.appengine.api.users.User (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type [Lcom.google.appengine.api.datastore.Blob; (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type [Lcom.google.appengine.api.datastore.Category; (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type [Lcom.google.appengine.api.datastore.Email; (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type [Lcom.google.appengine.api.datastore.GeoPt; (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type [Lcom.google.appengine.api.datastore.IMHandle; (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type [Lcom.google.appengine.api.datastore.Key; (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type [Lcom.google.appengine.api.datastore.Link; (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type [Lcom.google.appengine.api.datastore.PhoneNumber; (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type [Lcom.google.appengine.api.datastore.PostalAddress; (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type [Lcom.google.appengine.api.datastore.Rating; (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type [Lcom.google.appengine.api.datastore.ShortBlob; (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type [Lcom.google.appengine.api.datastore.Text; (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type [Lcom.google.appengine.api.blobstore.BlobKey; (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type [Lcom.google.appengine.api.users.User; (persistent=true, DFG=true, embedded=true)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<java.lang.Boolean> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<java.lang.Byte> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<java.lang.Character> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<java.lang.Double> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<java.lang.Float> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<java.lang.Integer> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<java.lang.Long> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<java.lang.Short> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<java.lang.String> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<java.lang.Enum> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<java.util.Date> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<com.google.appengine.api.datastore.Blob> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<com.google.appengine.api.datastore.Category> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<com.google.appengine.api.datastore.Email> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<com.google.appengine.api.datastore.GeoPt> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<com.google.appengine.api.datastore.IMHandle> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<com.google.appengine.api.datastore.Key> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<com.google.appengine.api.datastore.Link> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<com.google.appengine.api.datastore.PhoneNumber> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<com.google.appengine.api.datastore.PostalAddress> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<com.google.appengine.api.datastore.Rating> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<com.google.appengine.api.datastore.ShortBlob> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<com.google.appengine.api.datastore.Text> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<com.google.appengine.api.blobstore.BlobKey> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Collection<com.google.appengine.api.users.User> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<java.lang.Boolean> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<java.lang.Byte> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<java.lang.Character> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<java.lang.Double> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<java.lang.Float> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<java.lang.Integer> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<java.lang.Long> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<java.lang.Short> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<java.lang.String> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<java.lang.Enum> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<java.util.Date> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<com.google.appengine.api.datastore.Blob> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<com.google.appengine.api.datastore.Category> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<com.google.appengine.api.datastore.Email> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<com.google.appengine.api.datastore.GeoPt> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<com.google.appengine.api.datastore.IMHandle> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<com.google.appengine.api.datastore.Key> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<com.google.appengine.api.datastore.Link> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<com.google.appengine.api.datastore.PhoneNumber> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<com.google.appengine.api.datastore.PostalAddress> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<com.google.appengine.api.datastore.Rating> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<com.google.appengine.api.datastore.ShortBlob> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<com.google.appengine.api.datastore.Text> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<com.google.appengine.api.blobstore.BlobKey> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.List<com.google.appengine.api.users.User> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<java.lang.Boolean> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<java.lang.Byte> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<java.lang.Character> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<java.lang.Double> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<java.lang.Float> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<java.lang.Integer> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<java.lang.Long> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<java.lang.Short> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<java.lang.String> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<java.lang.Enum> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<java.util.Date> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<com.google.appengine.api.datastore.Blob> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<com.google.appengine.api.datastore.Category> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<com.google.appengine.api.datastore.Email> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<com.google.appengine.api.datastore.GeoPt> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<com.google.appengine.api.datastore.IMHandle> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<com.google.appengine.api.datastore.Key> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<com.google.appengine.api.datastore.Link> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<com.google.appengine.api.datastore.PhoneNumber> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<com.google.appengine.api.datastore.PostalAddress> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<com.google.appengine.api.datastore.Rating> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<com.google.appengine.api.datastore.ShortBlob> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<com.google.appengine.api.datastore.Text> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<com.google.appengine.api.blobstore.BlobKey> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java type java.util.Set<com.google.appengine.api.users.User> (persistent=true, DFG=true, embedded=false)
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Java types support loaded
+16:54:46,625 (main) DEBUG [DataNucleus.Persistence] - Type converter support initialising ...
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.math.BigDecimal<->java.lang.String using org.datanucleus.store.types.converters.BigDecimalStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.math.BigInteger<->java.lang.String using org.datanucleus.store.types.converters.BigIntegerStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.util.BitSet<->java.lang.String using org.datanucleus.store.types.converters.BitSetStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.util.Calendar<->java.lang.String using org.datanucleus.store.types.converters.CalendarStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.lang.Class<->java.lang.String using org.datanucleus.store.types.converters.ClassStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.awt.Color<->java.lang.String using org.datanucleus.store.types.converters.ColorStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.util.Currency<->java.lang.String using org.datanucleus.store.types.converters.CurrencyStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.util.Date<->java.lang.Long using org.datanucleus.store.types.converters.DateLongConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.util.Date<->java.lang.String using org.datanucleus.store.types.converters.DateStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.util.Locale<->java.lang.String using org.datanucleus.store.types.converters.LocaleStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.sql.Date<->java.lang.Long using org.datanucleus.store.types.converters.SqlDateLongConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.sql.Date<->java.lang.String using org.datanucleus.store.types.converters.SqlDateStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.sql.Time<->java.lang.Long using org.datanucleus.store.types.converters.SqlTimeLongConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.sql.Time<->java.lang.String using org.datanucleus.store.types.converters.SqlTimeStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.sql.Timestamp<->java.lang.Long using org.datanucleus.store.types.converters.SqlTimestampLongConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.lang.StringBuffer<->java.lang.String using org.datanucleus.store.types.converters.StringBufferStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.util.TimeZone<->java.lang.String using org.datanucleus.store.types.converters.TimeZoneStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.net.URI<->java.lang.String using org.datanucleus.store.types.converters.URIStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.net.URL<->java.lang.String using org.datanucleus.store.types.converters.URLStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Added converter for java.util.UUID<->java.lang.String using org.datanucleus.store.types.converters.UUIDStringConverter
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - TypeConverter for javax.time.calendar.LocalDate<->java.lang.String ignored since java type not present in CLASSPATH
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - TypeConverter for javax.time.calendar.LocalTime<->java.lang.String ignored since java type not present in CLASSPATH
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - TypeConverter for javax.time.calendar.LocalTime<->java.lang.Long ignored since java type not present in CLASSPATH
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - TypeConverter for javax.time.calendar.LocalDateTime<->java.lang.String ignored since java type not present in CLASSPATH
+16:54:46,641 (main) DEBUG [DataNucleus.Persistence] - Type converter support loaded
+16:54:46,641 (main) DEBUG [DataNucleus.MetaData] - MetaDataManager : Input=(XML,Annotations), XML-Validation=false
+16:54:46,641 (main) DEBUG [DataNucleus.MetaData] - MetaData Management : Loading Metadata for metadata files "[-enhancerName, ASM, C:\Documents and Settings\extern.kasipandian\My Documents\Dinesh\Personal\My_Websites\SignalMapper\src\main\resources\META-INF\orm.mt]" ...
+16:54:46,641 (main) WARN  [DataNucleus.MetaData] - Metadata file -enhancerName not found in CLASSPATH
+16:54:46,641 (main) WARN  [DataNucleus.MetaData] - Metadata file ASM not found in CLASSPATH
+16:54:46,641 (main) DEBUG [DataNucleus.MetaData] - Parsing MetaData file "file:/C:/Documents%20and%20Settings/extern.kasipandian/My%20Documents/Dinesh/Personal/My_Websites/SignalMapper/src/main/resources/META-INF/orm.mt" using handler "jpa" (validation="false")
+16:54:46,688 (main) DEBUG [DataNucleus.MetaData] - Populating all MetaData ...
+16:54:46,688 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Country" : Populating Meta-Data
+16:54:46,719 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Country" has been specified with JPA annotations so using those.
+16:54:46,735 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Country" is having internal MetaData definition updated with Annotations information
+16:54:46,735 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Location" : Populating Meta-Data
+16:54:46,735 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Location" has been specified with JPA annotations so using those.
+16:54:46,735 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Location" is having internal MetaData definition updated with Annotations information
+16:54:46,735 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Operator" : Populating Meta-Data
+16:54:46,735 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Operator" has been specified with JPA annotations so using those.
+16:54:46,750 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Operator" is having internal MetaData definition updated with Annotations information
+16:54:46,750 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.SignalStrength" : Populating Meta-Data
+16:54:46,750 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.SignalStrength" has been specified with JPA annotations so using those.
+16:54:46,750 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.SignalStrength" is having internal MetaData definition updated with Annotations information
+16:54:46,750 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Technology" : Populating Meta-Data
+16:54:46,750 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Technology" has been specified with JPA annotations so using those.
+16:54:46,750 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Technology" is having internal MetaData definition updated with Annotations information
+16:54:46,750 (main) DEBUG [DataNucleus.MetaData] - Initialising all MetaData ...
+16:54:46,750 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Country" : Initialising Meta-Data
+16:54:46,750 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Location" : Initialising Meta-Data
+16:54:46,750 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Operator" : Initialising Meta-Data
+16:54:46,750 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.SignalStrength" : Initialising Meta-Data
+16:54:46,750 (main) DEBUG [DataNucleus.MetaData] - Class "com.signaldata.model.Technology" : Initialising Meta-Data
+16:54:46,750 (main) DEBUG [DataNucleus.MetaData] - MetaData Management : Load of Metadata complete
+16:54:46,766 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "com.signaldata.model.Country" starting ...
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt implement the interface "javax.jdo.spi.PersistenceCapable" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt implement the interface "javax.jdo.spi.Detachable" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have field "jdoInheritedFieldCount" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have field "jdoFieldNames" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have field "jdoPersistenceCapableSuperclass" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have field "jdoDetachedState" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have field "jdoFieldTypes" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have field "jdoStateManager" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have field "jdoFieldFlags" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have field "jdoFlags" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "__jdoGetInheritedFieldCount" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoNewInstance" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoNewInstance" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoReplaceField" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoIsDirty" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoReplaceFields" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoIsPersistent" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoIsNew" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoIsTransactional" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoProvideFields" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoCopyFields" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoCopyKeyFieldsToObjectId" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoCopyKeyFieldsToObjectId" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoGetManagedFieldCount" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoCopyKeyFieldsFromObjectId" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoCopyKeyFieldsFromObjectId" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoReplaceStateManager" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoNewObjectIdInstance" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoNewObjectIdInstance" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoGetTransactionalObjectId" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoGetPersistenceManager" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoMakeDirty" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "__jdoFieldFlagsInit" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoSuperClone" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "__jdoFieldNamesInit" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoProvideField" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoReplaceDetachedState" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoPreSerialize" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoCopyField" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoIsDeleted" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoReplaceFlags" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoGetObjectId" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoIsDetached" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "__jdoPersistenceCapableSuperclassInit" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "___jdo$loadClass" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "__jdoFieldTypesInit" but is required
+16:54:46,797 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Country" doesnt have method "jdoGetVersion" but is required
+16:54:46,813 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: javax.jdo.spi.Detachable
+16:54:46,860 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: javax.jdo.spi.PersistenceCapable
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Country.getCountryID changing field "com.signaldata.model.Country.countryID" for call to "jdoGetcountryID()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Country.setCountryID changing field "com.signaldata.model.Country.countryID" for call to "jdoSetcountryID()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Country.getName changing field "com.signaldata.model.Country.name" for call to "jdoGetname()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Country.setName changing field "com.signaldata.model.Country.name" for call to "jdoSetname()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Country.getCode changing field "com.signaldata.model.Country.code" for call to "jdoGetcode()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Country.setCode changing field "com.signaldata.model.Country.code" for call to "jdoSetcode()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding field "javax.jdo.spi.StateManager jdoStateManager"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding field "byte jdoFlags"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Object; jdoDetachedState"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[B jdoFieldFlags"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.Class jdoPersistenceCapableSuperclass"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Class; jdoFieldTypes"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.String; jdoFieldNames"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding field "int jdoInheritedFieldCount"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void <clinit>()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsFromObjectId(interface javax.jdo.spi.PersistenceCapable$ObjectIdFieldConsumer fc, class java.lang.Object oid)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsFromObjectId(class java.lang.Object oid)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsToObjectId(class java.lang.Object oid)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsToObjectId(interface javax.jdo.spi.PersistenceCapable$ObjectIdFieldSupplier fs, class java.lang.Object oid)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetObjectId()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetVersion()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoPreSerialize()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.PersistenceManager jdoGetPersistenceManager()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetTransactionalObjectId()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDeleted()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDirty()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsNew()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsPersistent()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsTransactional()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoMakeDirty(class java.lang.String fieldName)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoNewObjectIdInstance()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoNewObjectIdInstance(class java.lang.Object key)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoProvideFields(class [I indices)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceFields(class [I indices)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceFlags()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceStateManager(interface javax.jdo.spi.StateManager sm)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceDetachedState()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDetached()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.spi.PersistenceCapable jdoNewInstance(interface javax.jdo.spi.StateManager sm)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.spi.PersistenceCapable jdoNewInstance(interface javax.jdo.spi.StateManager sm, class java.lang.Object obj)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceField(int index)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoProvideField(int index)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyField(class com.signaldata.model.Country obj, int index)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyFields(class java.lang.Object obj, class [I indices)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.String; __jdoFieldNamesInit()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.Class; __jdoFieldTypesInit()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[B __jdoFieldFlagsInit()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int __jdoGetInheritedFieldCount()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int jdoGetManagedFieldCount()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class __jdoPersistenceCapableSuperclassInit()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class ___jdo$loadClass(class java.lang.String className)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoSuperClone()"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String jdoGetcode(class com.signaldata.model.Country objPC)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetcode(class com.signaldata.model.Country objPC, class java.lang.String val)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Long jdoGetcountryID(class com.signaldata.model.Country objPC)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetcountryID(class com.signaldata.model.Country objPC, class java.lang.Long val)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String jdoGetname(class com.signaldata.model.Country objPC)"
+16:54:46,875 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetname(class com.signaldata.model.Country objPC, class java.lang.String val)"
+16:54:46,891 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Documents and Settings\extern.kasipandian\My Documents\Dinesh\Personal\My_Websites\SignalMapper\war\WEB-INF\classes\com\signaldata\model\Country.class" with enhanced definition
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "com.signaldata.model.Country" completed
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "com.signaldata.model.Location" starting ...
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt implement the interface "javax.jdo.spi.PersistenceCapable" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt implement the interface "javax.jdo.spi.Detachable" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have field "jdoInheritedFieldCount" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have field "jdoFieldNames" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have field "jdoPersistenceCapableSuperclass" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have field "jdoDetachedState" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have field "jdoFieldTypes" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have field "jdoStateManager" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have field "jdoFieldFlags" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have field "jdoFlags" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "__jdoGetInheritedFieldCount" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoNewInstance" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoNewInstance" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoReplaceField" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoIsDirty" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoReplaceFields" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoIsPersistent" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoIsNew" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoIsTransactional" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoProvideFields" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoCopyFields" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoCopyKeyFieldsToObjectId" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoCopyKeyFieldsToObjectId" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoGetManagedFieldCount" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoCopyKeyFieldsFromObjectId" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoCopyKeyFieldsFromObjectId" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoReplaceStateManager" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoNewObjectIdInstance" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoNewObjectIdInstance" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoGetTransactionalObjectId" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoGetPersistenceManager" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoMakeDirty" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "__jdoFieldFlagsInit" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoSuperClone" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "__jdoFieldNamesInit" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoProvideField" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoReplaceDetachedState" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoPreSerialize" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoCopyField" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoIsDeleted" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoReplaceFlags" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoGetObjectId" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoIsDetached" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "__jdoPersistenceCapableSuperclassInit" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "___jdo$loadClass" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "__jdoFieldTypesInit" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Location" doesnt have method "jdoGetVersion" but is required
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: javax.jdo.spi.Detachable
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: javax.jdo.spi.PersistenceCapable
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Location.getLocationID changing field "com.signaldata.model.Location.locationID" for call to "jdoGetlocationID()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Location.setLocationID changing field "com.signaldata.model.Location.locationID" for call to "jdoSetlocationID()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Location.getLatitude changing field "com.signaldata.model.Location.latitude" for call to "jdoGetlatitude()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Location.setLatitude changing field "com.signaldata.model.Location.latitude" for call to "jdoSetlatitude()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Location.getLongitude changing field "com.signaldata.model.Location.longitude" for call to "jdoGetlongitude()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Location.setLongitude changing field "com.signaldata.model.Location.longitude" for call to "jdoSetlongitude()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Location.getCountry changing field "com.signaldata.model.Location.country" for call to "jdoGetcountry()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Location.setCountry changing field "com.signaldata.model.Location.country" for call to "jdoSetcountry()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding field "javax.jdo.spi.StateManager jdoStateManager"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding field "byte jdoFlags"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Object; jdoDetachedState"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[B jdoFieldFlags"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.Class jdoPersistenceCapableSuperclass"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Class; jdoFieldTypes"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.String; jdoFieldNames"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding field "int jdoInheritedFieldCount"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void <clinit>()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsFromObjectId(interface javax.jdo.spi.PersistenceCapable$ObjectIdFieldConsumer fc, class java.lang.Object oid)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsFromObjectId(class java.lang.Object oid)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsToObjectId(class java.lang.Object oid)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsToObjectId(interface javax.jdo.spi.PersistenceCapable$ObjectIdFieldSupplier fs, class java.lang.Object oid)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetObjectId()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetVersion()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoPreSerialize()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.PersistenceManager jdoGetPersistenceManager()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetTransactionalObjectId()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDeleted()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDirty()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsNew()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsPersistent()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsTransactional()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoMakeDirty(class java.lang.String fieldName)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoNewObjectIdInstance()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoNewObjectIdInstance(class java.lang.Object key)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoProvideFields(class [I indices)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceFields(class [I indices)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceFlags()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceStateManager(interface javax.jdo.spi.StateManager sm)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceDetachedState()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDetached()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.spi.PersistenceCapable jdoNewInstance(interface javax.jdo.spi.StateManager sm)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.spi.PersistenceCapable jdoNewInstance(interface javax.jdo.spi.StateManager sm, class java.lang.Object obj)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceField(int index)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoProvideField(int index)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyField(class com.signaldata.model.Location obj, int index)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyFields(class java.lang.Object obj, class [I indices)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.String; __jdoFieldNamesInit()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.Class; __jdoFieldTypesInit()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[B __jdoFieldFlagsInit()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int __jdoGetInheritedFieldCount()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int jdoGetManagedFieldCount()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class __jdoPersistenceCapableSuperclassInit()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class ___jdo$loadClass(class java.lang.String className)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoSuperClone()"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "com.signaldata.model.Country jdoGetcountry(class com.signaldata.model.Location objPC)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetcountry(class com.signaldata.model.Location objPC, class com.signaldata.model.Country val)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "double jdoGetlatitude(class com.signaldata.model.Location objPC)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetlatitude(class com.signaldata.model.Location objPC, double val)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Long jdoGetlocationID(class com.signaldata.model.Location objPC)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetlocationID(class com.signaldata.model.Location objPC, class java.lang.Long val)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "double jdoGetlongitude(class com.signaldata.model.Location objPC)"
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetlongitude(class com.signaldata.model.Location objPC, double val)"
+16:54:46,891 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Documents and Settings\extern.kasipandian\My Documents\Dinesh\Personal\My_Websites\SignalMapper\war\WEB-INF\classes\com\signaldata\model\Location.class" with enhanced definition
+16:54:46,891 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "com.signaldata.model.Location" completed
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "com.signaldata.model.Operator" starting ...
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt implement the interface "javax.jdo.spi.PersistenceCapable" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt implement the interface "javax.jdo.spi.Detachable" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have field "jdoInheritedFieldCount" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have field "jdoFieldNames" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have field "jdoPersistenceCapableSuperclass" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have field "jdoDetachedState" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have field "jdoFieldTypes" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have field "jdoStateManager" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have field "jdoFieldFlags" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have field "jdoFlags" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "__jdoGetInheritedFieldCount" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoNewInstance" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoNewInstance" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoReplaceField" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoIsDirty" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoReplaceFields" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoIsPersistent" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoIsNew" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoIsTransactional" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoProvideFields" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoCopyFields" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoCopyKeyFieldsToObjectId" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoCopyKeyFieldsToObjectId" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoGetManagedFieldCount" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoCopyKeyFieldsFromObjectId" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoCopyKeyFieldsFromObjectId" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoReplaceStateManager" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoNewObjectIdInstance" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoNewObjectIdInstance" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoGetTransactionalObjectId" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoGetPersistenceManager" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoMakeDirty" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "__jdoFieldFlagsInit" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoSuperClone" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "__jdoFieldNamesInit" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoProvideField" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoReplaceDetachedState" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoPreSerialize" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoCopyField" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoIsDeleted" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoReplaceFlags" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoGetObjectId" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoIsDetached" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "__jdoPersistenceCapableSuperclassInit" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "___jdo$loadClass" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "__jdoFieldTypesInit" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Operator" doesnt have method "jdoGetVersion" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: javax.jdo.spi.Detachable
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: javax.jdo.spi.PersistenceCapable
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Operator.getOperatorID changing field "com.signaldata.model.Operator.operatorID" for call to "jdoGetoperatorID()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Operator.setOperatorID changing field "com.signaldata.model.Operator.operatorID" for call to "jdoSetoperatorID()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Operator.getName changing field "com.signaldata.model.Operator.name" for call to "jdoGetname()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Operator.setName changing field "com.signaldata.model.Operator.name" for call to "jdoSetname()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Operator.getCountries changing field "com.signaldata.model.Operator.countries" for call to "jdoGetcountries()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Operator.setCountries changing field "com.signaldata.model.Operator.countries" for call to "jdoSetcountries()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding field "javax.jdo.spi.StateManager jdoStateManager"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding field "byte jdoFlags"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Object; jdoDetachedState"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[B jdoFieldFlags"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.Class jdoPersistenceCapableSuperclass"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Class; jdoFieldTypes"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.String; jdoFieldNames"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding field "int jdoInheritedFieldCount"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void <clinit>()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsFromObjectId(interface javax.jdo.spi.PersistenceCapable$ObjectIdFieldConsumer fc, class java.lang.Object oid)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsFromObjectId(class java.lang.Object oid)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsToObjectId(class java.lang.Object oid)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsToObjectId(interface javax.jdo.spi.PersistenceCapable$ObjectIdFieldSupplier fs, class java.lang.Object oid)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetObjectId()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetVersion()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoPreSerialize()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.PersistenceManager jdoGetPersistenceManager()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetTransactionalObjectId()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDeleted()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDirty()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsNew()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsPersistent()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsTransactional()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoMakeDirty(class java.lang.String fieldName)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoNewObjectIdInstance()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoNewObjectIdInstance(class java.lang.Object key)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoProvideFields(class [I indices)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceFields(class [I indices)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceFlags()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceStateManager(interface javax.jdo.spi.StateManager sm)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceDetachedState()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDetached()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.spi.PersistenceCapable jdoNewInstance(interface javax.jdo.spi.StateManager sm)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.spi.PersistenceCapable jdoNewInstance(interface javax.jdo.spi.StateManager sm, class java.lang.Object obj)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceField(int index)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoProvideField(int index)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyField(class com.signaldata.model.Operator obj, int index)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyFields(class java.lang.Object obj, class [I indices)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.String; __jdoFieldNamesInit()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.Class; __jdoFieldTypesInit()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[B __jdoFieldFlagsInit()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int __jdoGetInheritedFieldCount()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int jdoGetManagedFieldCount()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class __jdoPersistenceCapableSuperclassInit()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class ___jdo$loadClass(class java.lang.String className)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoSuperClone()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.util.List jdoGetcountries(class com.signaldata.model.Operator objPC)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetcountries(class com.signaldata.model.Operator objPC, interface java.util.List val)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String jdoGetname(class com.signaldata.model.Operator objPC)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetname(class com.signaldata.model.Operator objPC, class java.lang.String val)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Long jdoGetoperatorID(class com.signaldata.model.Operator objPC)"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetoperatorID(class com.signaldata.model.Operator objPC, class java.lang.Long val)"
+16:54:46,907 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Documents and Settings\extern.kasipandian\My Documents\Dinesh\Personal\My_Websites\SignalMapper\war\WEB-INF\classes\com\signaldata\model\Operator.class" with enhanced definition
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "com.signaldata.model.Operator" completed
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "com.signaldata.model.SignalStrength" starting ...
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt implement the interface "javax.jdo.spi.PersistenceCapable" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt implement the interface "javax.jdo.spi.Detachable" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have field "jdoInheritedFieldCount" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have field "jdoFieldNames" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have field "jdoPersistenceCapableSuperclass" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have field "jdoDetachedState" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have field "jdoFieldTypes" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have field "jdoStateManager" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have field "jdoFieldFlags" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have field "jdoFlags" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "__jdoGetInheritedFieldCount" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoNewInstance" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoNewInstance" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoReplaceField" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoIsDirty" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoReplaceFields" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoIsPersistent" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoIsNew" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoIsTransactional" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoProvideFields" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoCopyFields" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoCopyKeyFieldsToObjectId" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoCopyKeyFieldsToObjectId" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoGetManagedFieldCount" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoCopyKeyFieldsFromObjectId" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoCopyKeyFieldsFromObjectId" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoReplaceStateManager" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoNewObjectIdInstance" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoNewObjectIdInstance" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoGetTransactionalObjectId" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoGetPersistenceManager" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoMakeDirty" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "__jdoFieldFlagsInit" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoSuperClone" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "__jdoFieldNamesInit" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoProvideField" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoReplaceDetachedState" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoPreSerialize" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoCopyField" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoIsDeleted" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoReplaceFlags" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoGetObjectId" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoIsDetached" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "__jdoPersistenceCapableSuperclassInit" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "___jdo$loadClass" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "__jdoFieldTypesInit" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.SignalStrength" doesnt have method "jdoGetVersion" but is required
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: javax.jdo.spi.Detachable
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: javax.jdo.spi.PersistenceCapable
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.SignalStrength.getSignalStrengthID changing field "com.signaldata.model.SignalStrength.signalStrengthID" for call to "jdoGetsignalStrengthID()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.SignalStrength.setSignalStrengthID changing field "com.signaldata.model.SignalStrength.signalStrengthID" for call to "jdoSetsignalStrengthID()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.SignalStrength.getOperator changing field "com.signaldata.model.SignalStrength.operator" for call to "jdoGetoperator()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.SignalStrength.setOperator changing field "com.signaldata.model.SignalStrength.operator" for call to "jdoSetoperator()"
+16:54:46,907 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.SignalStrength.getTechnology changing field "com.signaldata.model.SignalStrength.technology" for call to "jdoGettechnology()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.SignalStrength.setTechnology changing field "com.signaldata.model.SignalStrength.technology" for call to "jdoSettechnology()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.SignalStrength.getSignalStrengthValue changing field "com.signaldata.model.SignalStrength.signalStrengthValue" for call to "jdoGetsignalStrengthValue()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.SignalStrength.setSignalStrengthValue changing field "com.signaldata.model.SignalStrength.signalStrengthValue" for call to "jdoSetsignalStrengthValue()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.SignalStrength.getLocation changing field "com.signaldata.model.SignalStrength.location" for call to "jdoGetlocation()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.SignalStrength.setLocation changing field "com.signaldata.model.SignalStrength.location" for call to "jdoSetlocation()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "javax.jdo.spi.StateManager jdoStateManager"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "byte jdoFlags"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Object; jdoDetachedState"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[B jdoFieldFlags"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.Class jdoPersistenceCapableSuperclass"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Class; jdoFieldTypes"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.String; jdoFieldNames"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "int jdoInheritedFieldCount"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void <clinit>()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsFromObjectId(interface javax.jdo.spi.PersistenceCapable$ObjectIdFieldConsumer fc, class java.lang.Object oid)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsFromObjectId(class java.lang.Object oid)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsToObjectId(class java.lang.Object oid)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsToObjectId(interface javax.jdo.spi.PersistenceCapable$ObjectIdFieldSupplier fs, class java.lang.Object oid)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetObjectId()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetVersion()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoPreSerialize()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.PersistenceManager jdoGetPersistenceManager()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetTransactionalObjectId()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDeleted()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDirty()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsNew()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsPersistent()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsTransactional()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoMakeDirty(class java.lang.String fieldName)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoNewObjectIdInstance()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoNewObjectIdInstance(class java.lang.Object key)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoProvideFields(class [I indices)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceFields(class [I indices)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceFlags()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceStateManager(interface javax.jdo.spi.StateManager sm)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceDetachedState()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDetached()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.spi.PersistenceCapable jdoNewInstance(interface javax.jdo.spi.StateManager sm)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.spi.PersistenceCapable jdoNewInstance(interface javax.jdo.spi.StateManager sm, class java.lang.Object obj)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceField(int index)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoProvideField(int index)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyField(class com.signaldata.model.SignalStrength obj, int index)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyFields(class java.lang.Object obj, class [I indices)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.String; __jdoFieldNamesInit()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.Class; __jdoFieldTypesInit()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[B __jdoFieldFlagsInit()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int __jdoGetInheritedFieldCount()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int jdoGetManagedFieldCount()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class __jdoPersistenceCapableSuperclassInit()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class ___jdo$loadClass(class java.lang.String className)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoSuperClone()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "com.signaldata.model.Location jdoGetlocation(class com.signaldata.model.SignalStrength objPC)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetlocation(class com.signaldata.model.SignalStrength objPC, class com.signaldata.model.Location val)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "com.signaldata.model.Operator jdoGetoperator(class com.signaldata.model.SignalStrength objPC)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetoperator(class com.signaldata.model.SignalStrength objPC, class com.signaldata.model.Operator val)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Long jdoGetsignalStrengthID(class com.signaldata.model.SignalStrength objPC)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetsignalStrengthID(class com.signaldata.model.SignalStrength objPC, class java.lang.Long val)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int jdoGetsignalStrengthValue(class com.signaldata.model.SignalStrength objPC)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetsignalStrengthValue(class com.signaldata.model.SignalStrength objPC, int val)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "com.signaldata.model.Technology jdoGettechnology(class com.signaldata.model.SignalStrength objPC)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSettechnology(class com.signaldata.model.SignalStrength objPC, class com.signaldata.model.Technology val)"
+16:54:46,922 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Documents and Settings\extern.kasipandian\My Documents\Dinesh\Personal\My_Websites\SignalMapper\war\WEB-INF\classes\com\signaldata\model\SignalStrength.class" with enhanced definition
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "com.signaldata.model.SignalStrength" completed
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "com.signaldata.model.Technology" starting ...
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt implement the interface "javax.jdo.spi.PersistenceCapable" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt implement the interface "javax.jdo.spi.Detachable" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have field "jdoInheritedFieldCount" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have field "jdoFieldNames" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have field "jdoPersistenceCapableSuperclass" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have field "jdoDetachedState" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have field "jdoFieldTypes" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have field "jdoStateManager" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have field "jdoFieldFlags" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have field "jdoFlags" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "__jdoGetInheritedFieldCount" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoNewInstance" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoNewInstance" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoReplaceField" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoIsDirty" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoReplaceFields" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoIsPersistent" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoIsNew" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoIsTransactional" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoProvideFields" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoCopyFields" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoCopyKeyFieldsToObjectId" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoCopyKeyFieldsToObjectId" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoGetManagedFieldCount" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoCopyKeyFieldsFromObjectId" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoCopyKeyFieldsFromObjectId" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoReplaceStateManager" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoNewObjectIdInstance" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoNewObjectIdInstance" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoGetTransactionalObjectId" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoGetPersistenceManager" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoMakeDirty" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "__jdoFieldFlagsInit" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoSuperClone" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "__jdoFieldNamesInit" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoProvideField" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoReplaceDetachedState" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoPreSerialize" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoCopyField" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoIsDeleted" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoReplaceFlags" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoGetObjectId" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoIsDetached" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "__jdoPersistenceCapableSuperclassInit" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "___jdo$loadClass" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "__jdoFieldTypesInit" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Class "com.signaldata.model.Technology" doesnt have method "jdoGetVersion" but is required
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: javax.jdo.spi.Detachable
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: javax.jdo.spi.PersistenceCapable
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Technology.getTechnologyID changing field "com.signaldata.model.Technology.technologyID" for call to "jdoGettechnologyID()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Technology.setTechnologyID changing field "com.signaldata.model.Technology.technologyID" for call to "jdoSettechnologyID()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Technology.getName changing field "com.signaldata.model.Technology.name" for call to "jdoGetname()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method com.signaldata.model.Technology.setName changing field "com.signaldata.model.Technology.name" for call to "jdoSetname()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "javax.jdo.spi.StateManager jdoStateManager"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "byte jdoFlags"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Object; jdoDetachedState"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[B jdoFieldFlags"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.Class jdoPersistenceCapableSuperclass"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Class; jdoFieldTypes"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.String; jdoFieldNames"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding field "int jdoInheritedFieldCount"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void <clinit>()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsFromObjectId(interface javax.jdo.spi.PersistenceCapable$ObjectIdFieldConsumer fc, class java.lang.Object oid)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsFromObjectId(class java.lang.Object oid)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsToObjectId(class java.lang.Object oid)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyKeyFieldsToObjectId(interface javax.jdo.spi.PersistenceCapable$ObjectIdFieldSupplier fs, class java.lang.Object oid)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetObjectId()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetVersion()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoPreSerialize()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.PersistenceManager jdoGetPersistenceManager()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoGetTransactionalObjectId()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDeleted()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDirty()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsNew()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsPersistent()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsTransactional()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoMakeDirty(class java.lang.String fieldName)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoNewObjectIdInstance()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoNewObjectIdInstance(class java.lang.Object key)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoProvideFields(class [I indices)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceFields(class [I indices)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceFlags()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceStateManager(interface javax.jdo.spi.StateManager sm)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceDetachedState()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean jdoIsDetached()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.spi.PersistenceCapable jdoNewInstance(interface javax.jdo.spi.StateManager sm)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "javax.jdo.spi.PersistenceCapable jdoNewInstance(interface javax.jdo.spi.StateManager sm, class java.lang.Object obj)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoReplaceField(int index)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoProvideField(int index)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyField(class com.signaldata.model.Technology obj, int index)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoCopyFields(class java.lang.Object obj, class [I indices)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.String; __jdoFieldNamesInit()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.Class; __jdoFieldTypesInit()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[B __jdoFieldFlagsInit()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int __jdoGetInheritedFieldCount()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int jdoGetManagedFieldCount()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class __jdoPersistenceCapableSuperclassInit()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class ___jdo$loadClass(class java.lang.String className)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object jdoSuperClone()"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String jdoGetname(class com.signaldata.model.Technology objPC)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSetname(class com.signaldata.model.Technology objPC, class java.lang.String val)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Long jdoGettechnologyID(class com.signaldata.model.Technology objPC)"
+16:54:46,922 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void jdoSettechnologyID(class com.signaldata.model.Technology objPC, class java.lang.Long val)"
+16:54:46,922 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Documents and Settings\extern.kasipandian\My Documents\Dinesh\Personal\My_Websites\SignalMapper\war\WEB-INF\classes\com\signaldata\model\Technology.class" with enhanced definition
+16:54:46,938 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "com.signaldata.model.Technology" completed
+16:54:46,938 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 5 classes. Timings : input=171 ms, enhance=188 ms, total=359 ms. Consult the log for full details

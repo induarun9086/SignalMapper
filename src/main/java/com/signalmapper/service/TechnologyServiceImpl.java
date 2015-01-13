@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
-import com.signalmapper.data.model.Technology;
+import com.signaldata.model.Technology;
 import com.signalmapper.technology.TechnologyDAO;
 
 @Service("technologyService")

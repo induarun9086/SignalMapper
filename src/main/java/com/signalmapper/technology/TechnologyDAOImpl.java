@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 import org.springframework.stereotype.Repository;
 
 import com.signalmapper.dao.GenericDaoJpaImpl;
-import com.signalmapper.data.model.Technology;
+import com.signaldata.model.Technology;
 
 @Repository
 public class TechnologyDAOImpl extends GenericDaoJpaImpl<Technology, Serializable> implements TechnologyDAO {

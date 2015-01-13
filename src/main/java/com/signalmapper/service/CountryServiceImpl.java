@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.signalmapper.country.CountryDAO;
-import com.signalmapper.data.model.Country;
+import com.signaldata.model.Country;
 
 @Service("countryService")
 @Transactional
